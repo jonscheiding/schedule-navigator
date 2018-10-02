@@ -4,8 +4,9 @@
   "private": true,
   "dependencies": {
     "moment": "^2.22.2",
+    "polished": "^2.2.0",
+    "random-id": "^1.0.3",
     "randomcolor": "^0.5.3",
-    "randomid": "^1.0.0",
     "react": "^16.5.2",
     "react-big-calendar": "^0.20.1",
     "react-dom": "^16.5.2",

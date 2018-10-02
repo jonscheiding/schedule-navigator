@@ -11,16 +11,19 @@ export default class EventsStore {
   constructor() {
     this.events = events.filter(e => e.title.startsWith('A'));
 
-    this.topics = this._createMap(e => e.topic, 'topic');
-    this.locations = this._createMap(e => e.sessionLocation, 'location');
+    this.topics = this._createFilterMap(e => e.topic, 'topic');
+    this.locations = this._createFilterMap(e => e.sessionLocation, 'location');
+    this.interested = this._createInterestedMap();
     this.colorBy = 'location';
+    this.excludeNotInterested = false;
   }
 
   getFilteredList() {
     return this.events
       .filter(e =>
         this.topics[e.topic].isIncluded &&
-        this.locations[e.sessionLocation].isIncluded)
+        this.locations[e.sessionLocation].isIncluded &&
+        (this.interested[e.id] || !this.excludeNotInterested))
       .map(e => ({
         ...e,
         color: this._getColor(e)
@@ -36,9 +39,18 @@ export default class EventsStore {
     this.colorBy = 'topic';
   }
 
+  toggleInterested(event) {
+    this.interested[event.id] = !this.interested[event.id];
+    localStorage.setItem(`${event.id}/isInterested`, this.interested[event.id]);
+  }
+
   updateIncluded(choice, isIncluded) {
     choice.isIncluded = isIncluded;
     localStorage.setItem(`${choice.type}/${choice.value}/isIncluded`, isIncluded);
+  }
+
+  updateExcludeNotInterested(value) {
+    this.excludeNotInterested = value;
   }
 
   _getColor(e) {
@@ -52,7 +64,7 @@ export default class EventsStore {
     }
   }
 
-  _createMap(fn, type) {
+  _createFilterMap(fn, type) {
     var uniqueValues = Array.from(new Set(this.events.map(e => fn(e))));
     var map = {};
 
@@ -67,6 +79,15 @@ export default class EventsStore {
       }
     }
 
+    return map;
+  }
+
+  _createInterestedMap() {
+    const map = {};
+    for(const event of this.events) {
+      const isInterested = localStorage.getItem(`${event.id}/isInterested`);
+      map[event.id] = isInterested === 'true';
+    }
     return map;
   }
 }
