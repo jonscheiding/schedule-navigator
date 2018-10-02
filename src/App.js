@@ -65,8 +65,8 @@ class App extends Component {
       <div>
         <div className='title'>
           <b>{title}</b>
-          <a href='#' onClick={() => this.updateAllIncluded(choices, false)}>NONE</a>
-          <a href='#' onClick={() => this.updateAllIncluded(choices, true)}>ALL</a>
+          <button onClick={() => this.updateAllIncluded(choices, false)}>NONE</button>
+          <button onClick={() => this.updateAllIncluded(choices, true)}>ALL</button>
         </div>
         {keys.map(key => this.renderChoice(choices[key], title))}
       </div>
@@ -93,13 +93,13 @@ class App extends Component {
   }
 
   updateIncluded(choice, isIncluded) {
-    choice.isIncluded = isIncluded;
+    this.eventStore.updateIncluded(choice, isIncluded);
     this.setStateFromStore();
   }
 
   updateAllIncluded(choices, isIncluded) {
     for(const key of Object.keys(choices)) {
-      choices[key].isIncluded = isIncluded;
+      this.eventStore.updateIncluded(choices[key], isIncluded);
     }
     this.setStateFromStore();
   }

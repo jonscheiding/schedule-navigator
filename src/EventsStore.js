@@ -11,13 +11,12 @@ export default class EventsStore {
   constructor() {
     this.events = events.filter(e => e.title.startsWith('A'));
 
-    this.topics = this._createMap(e => e.topic);
-    this.locations = this._createMap(e => e.sessionLocation);
+    this.topics = this._createMap(e => e.topic, 'topic');
+    this.locations = this._createMap(e => e.sessionLocation, 'location');
     this.colorBy = 'location';
   }
 
   getFilteredList() {
-    console.log(this);
     return this.events
       .filter(e =>
         this.topics[e.topic].isIncluded &&
@@ -37,8 +36,9 @@ export default class EventsStore {
     this.colorBy = 'topic';
   }
 
-  setLocationIncluded(key, isIncluded) {
-    this.locations[key].isIncluded = true;
+  updateIncluded(choice, isIncluded) {
+    choice.isIncluded = isIncluded;
+    localStorage.setItem(`${choice.type}/${choice.value}/isIncluded`, isIncluded);
   }
 
   _getColor(e) {
@@ -47,18 +47,23 @@ export default class EventsStore {
         return this.locations[e.sessionLocation].color;
       case 'topic':
         return this.topics[e.topic].color;
+      default: 
+        return undefined;
     }
   }
 
-  _createMap(fn) {
+  _createMap(fn, type) {
     var uniqueValues = Array.from(new Set(this.events.map(e => fn(e))));
     var map = {};
 
     for(const value of uniqueValues) {
+      const isIncluded = localStorage.getItem(`${type}/${value}/isIncluded`);
+
       map[value] = {
         value: value,
+        type: type,
         color: randomColor({luminosity: 'light'}),
-        isIncluded: true
+        isIncluded: isIncluded !== 'false'
       }
     }
 
