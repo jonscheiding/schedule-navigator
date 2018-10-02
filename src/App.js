@@ -1,29 +1,43 @@
 import React, { Component } from 'react';
 import Calendar from 'react-big-calendar';
 import moment from 'moment';
+import randomId from 'randomid';
 
 import 'react-big-calendar/lib/css/react-big-calendar.css';
-
 import './App.css'
-import events from './events.json';
 
-for(const event of events) {
-  event.start = new Date(Date.parse(event.start));
-  event.end = new Date(Date.parse(event.end));
-}
-
-const localizer = Calendar.momentLocalizer(moment);
+import EventsStore from './EventsStore';
 
 class App extends Component {
-  render() {
-    const someEvents = events.filter(e => e.type === 'Demo Session');
+  constructor() { super(); 
+    this.eventStore = new EventsStore();
+    this.state = this.createStateFromStore();
+  }
 
+  setStateFromStore() {
+    this.setState(this.createStateFromStore());
+  }
+
+  createStateFromStore() {
+    return {
+      events: this.eventStore.getFilteredList(),
+      topics: this.eventStore.topics,
+      locations: this.eventStore.locations,
+      colorBy: this.eventStore.colorBy
+    }
+  }
+
+  render() {
     return (
       <div className='main container'>
         <div className='controls'>
           <div className='vertical container'>
-            <div className='topics scrollable'>TOPICS</div>
-            <div className='locations scrollable'>LOCATIONS</div>
+            <div className='topics chooser scrollable'>
+              {this.renderChooser(this.state.topics, 'topic')}
+            </div>
+            <div className='locations chooser scrollable'>
+              {this.renderChooser(this.state.locations, 'location')}
+            </div>
           </div>
         </div>
         <div className='calendar scrollable'>
@@ -31,17 +45,63 @@ class App extends Component {
             defaultDate={new Date(2018, 10, 25)}
             defaultView="week"
             views={['day', 'week']}
-            events={someEvents}
-            localizer={localizer}
-            style={{ height: "200%" }} 
+            events={this.state.events}
+            localizer={Calendar.momentLocalizer(moment)}
+            style={{ height: "100%" }} 
+            eventPropGetter={e => ({ style: { backgroundColor: e.color, color: 'black' } })}
             titleAccessor={e => e.abbreviation + ' - ' + e.title}
-            elementProps={{ style: { height: '200%' }}}
-            min={new Date(2018, 10, 25, 9, 0)}
-            max={new Date(2018, 10, 25, 21, 0)}
+            min={new Date(2018, 10, 25, 10, 0)}
+            max={new Date(2018, 10, 25, 22, 0)}
             />
         </div>
       </div>
     );
+  }
+
+  renderChooser(choices, title) {
+    const keys = Object.keys(choices).sort();
+
+    return (
+      <div>
+        <div className='title'>
+          <b>{title}</b>
+          <a href='#' onClick={() => this.updateAllIncluded(choices, false)}>NONE</a>
+          <a href='#' onClick={() => this.updateAllIncluded(choices, true)}>ALL</a>
+        </div>
+        {keys.map(key => this.renderChoice(choices[key], title))}
+      </div>
+    );
+  }
+
+  renderChoice(choice, title) {
+    const id = randomId();
+
+    return (
+      <div key={choice.value}>
+        <input type='checkbox' id={id}
+          checked={choice.isIncluded} 
+          onChange={e => this.updateIncluded(choice, e.target.checked)} />
+        <label htmlFor={id}>
+          { this.state.colorBy === title
+            ? <span className='color-label' style={{backgroundColor: choice.color}} />
+            : null
+          }
+          {choice.value || <i>Unknown</i>}
+        </label>
+      </div>
+    );
+  }
+
+  updateIncluded(choice, isIncluded) {
+    choice.isIncluded = isIncluded;
+    this.setStateFromStore();
+  }
+
+  updateAllIncluded(choices, isIncluded) {
+    for(const key of Object.keys(choices)) {
+      choices[key].isIncluded = isIncluded;
+    }
+    this.setStateFromStore();
   }
 }
 

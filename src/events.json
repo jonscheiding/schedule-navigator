@@ -285,7 +285,7 @@
   "sessionLocation": "Aria West",
   "start": "2018-11-26T18:30:00.000Z",
   "end": "2018-11-26T19:30:00.000Z",
-  "topic": "Automitive"
+  "topic": "Automotive"
 }, {
   "title": "SaaS Operations: The Foundation of SaaS Agility",
   "abbreviation": "ARC216",
@@ -333,7 +333,7 @@
   "sessionLocation": "Mirage",
   "start": "2018-11-26T18:30:00.000Z",
   "end": "2018-11-26T19:30:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[REPEAT 1] How Avatars & AR Are Driving Innovation: Lessons from Life Support Medical",
   "abbreviation": "AVR338-R1",
@@ -393,7 +393,7 @@
   "sessionLocation": "Bellagio",
   "start": "2018-11-26T18:30:00.000Z",
   "end": "2018-11-26T19:30:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "Effective Cost Optimization for Business",
   "abbreviation": "ARC201",
@@ -489,7 +489,7 @@
   "sessionLocation": "MGM",
   "start": "2018-11-26T20:00:00.000Z",
   "end": "2018-11-26T21:00:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[REPEAT] Build and Test a Serverless Error-Tracking Tool in One Weekend",
   "abbreviation": "SRV346-R",
@@ -549,7 +549,7 @@
   "sessionLocation": "Bellagio",
   "start": "2018-11-26T20:00:00.000Z",
   "end": "2018-11-26T21:00:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[CT] Airbus Goes Serverless with AWS to Improve Fleet Operations",
   "abbreviation": "MFG315",
@@ -765,7 +765,7 @@
   "sessionLocation": "Bellagio",
   "start": "2018-11-26T21:30:00.000Z",
   "end": "2018-11-26T22:30:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "How GumGum Migrated from Cassandra to Amazon DynamoDB",
   "abbreviation": "DAT345",
@@ -933,7 +933,7 @@
   "sessionLocation": "Mirage",
   "start": "2018-11-26T22:15:00.000Z",
   "end": "2018-11-26T23:15:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[REPEAT 2] Optimizing Performance in Amazon S3",
   "abbreviation": "STG367-R2",
@@ -993,7 +993,7 @@
   "sessionLocation": "Mirage",
   "start": "2018-11-26T22:15:00.000Z",
   "end": "2018-11-26T23:15:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "Secure Kubernetes Bursts to AWS Fargate",
   "abbreviation": "CON317",
@@ -1029,7 +1029,7 @@
   "sessionLocation": "Mirage",
   "start": "2018-11-26T23:00:00.000Z",
   "end": "2018-11-27T00:00:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[REPEAT 1] Everything You Wanted to Know about Developing for Voice Using Alexa",
   "abbreviation": "ALX306-R1",
@@ -1161,7 +1161,7 @@
   "sessionLocation": "Venetian",
   "start": "2018-11-26T23:45:00.000Z",
   "end": "2018-11-27T00:45:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[REPEAT] Advanced Traffic Management with Amazon Route 53 Traffic Flow",
   "abbreviation": "NET407-R",
@@ -1221,7 +1221,7 @@
   "sessionLocation": "Aria East",
   "start": "2018-11-26T23:45:00.000Z",
   "end": "2018-11-27T00:45:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[REPEAT 2] Accelerate Your Cloud Strategy with Training",
   "abbreviation": "ENT231-R2",
@@ -1377,7 +1377,7 @@
   "sessionLocation": "Venetian",
   "start": "2018-11-27T00:30:00.000Z",
   "end": "2018-11-27T01:30:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "Provide Faster, Scalable Solutions to Support Research Use Cases with AWS",
   "abbreviation": "WPS310",
@@ -1437,7 +1437,7 @@
   "sessionLocation": "Venetian",
   "start": "2018-11-27T02:00:00.000Z",
   "end": "2018-11-27T03:00:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[REPEAT] Reactive Microservices with AWS Lambda",
   "abbreviation": "SRV201-R",
@@ -1761,7 +1761,7 @@
   "sessionLocation": "Aria West",
   "start": "2018-11-26T17:00:00.000Z",
   "end": "2018-11-26T18:00:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[REPEAT] Amazon S3 Performance and Cost Optimization",
   "abbreviation": "STG208-R",
@@ -1881,7 +1881,7 @@
   "sessionLocation": "Aria West",
   "start": "2018-11-26T18:30:00.000Z",
   "end": "2018-11-26T19:30:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "Application Integration of serverless apps",
   "abbreviation": "SRV211",
@@ -1905,7 +1905,7 @@
   "sessionLocation": "Mirage",
   "start": "2018-11-26T18:30:00.000Z",
   "end": "2018-11-26T19:30:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[REPEAT] Modernize Your Data Warehouse with Amazon Redshift",
   "abbreviation": "ANT352-R",
@@ -2061,7 +2061,7 @@
   "sessionLocation": "Aria West",
   "start": "2018-11-26T20:00:00.000Z",
   "end": "2018-11-26T21:00:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "Massively Parallel Data Processing at Scale",
   "abbreviation": "ARC329",
@@ -2145,7 +2145,7 @@
   "sessionLocation": "Aria West",
   "start": "2018-11-26T20:00:00.000Z",
   "end": "2018-11-26T21:00:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "Creating a Support Chatbot",
   "abbreviation": "ARC328",
@@ -2277,7 +2277,7 @@
   "sessionLocation": "Aria West",
   "start": "2018-11-26T21:30:00.000Z",
   "end": "2018-11-26T22:30:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[REPEAT 1] Use Amazon MQ to Connect On-Premises Messaging to the Cloud",
   "abbreviation": "API203-R1",
@@ -2409,7 +2409,7 @@
   "sessionLocation": "Aria West",
   "start": "2018-11-26T21:30:00.000Z",
   "end": "2018-11-26T22:30:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[REPEAT] Manage Amazon EC2 Auto Scaling Groups via AWS CloudFormation & Launch Templates",
   "abbreviation": "COM401-R",
@@ -2661,7 +2661,7 @@
   "sessionLocation": "Aria West",
   "start": "2018-11-26T23:00:00.000Z",
   "end": "2018-11-27T00:00:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "Ingesting High-Volume, High-Speed Data Using Amazon Kinesis",
   "abbreviation": "ANT367",
@@ -2925,7 +2925,7 @@
   "sessionLocation": "Aria West",
   "start": "2018-11-27T00:30:00.000Z",
   "end": "2018-11-27T01:30:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[REPEAT] Amazon SageMaker and Chainer: Tips & Tricks",
   "abbreviation": "AIM329-R",
@@ -2937,7 +2937,7 @@
   "sessionLocation": "Aria West",
   "start": "2018-11-27T00:30:00.000Z",
   "end": "2018-11-27T01:30:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "Machine Learning in Telco: Analysis of Call Detail Record Data Sets",
   "abbreviation": "TLC304",
@@ -3405,7 +3405,7 @@
   "sessionLocation": "Bellagio",
   "start": "2018-11-26T17:45:00.000Z",
   "end": "2018-11-26T20:00:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[REPEAT] Instrumenting Kubernetes for Observability Using AWS X-Ray and Amazon CloudWatch",
   "abbreviation": "DEV303-R",
@@ -4113,7 +4113,7 @@
   "sessionLocation": "Mirage",
   "start": "2018-11-26T20:45:00.000Z",
   "end": "2018-11-26T23:00:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[REPEAT] Advanced Continuous Delivery Best Practices",
   "abbreviation": "DEV317-R",
@@ -4317,7 +4317,7 @@
   "sessionLocation": "Mirage",
   "start": "2018-11-26T21:30:00.000Z",
   "end": "2018-11-26T22:30:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "Business Process Automation Using Crowdsourcing",
   "abbreviation": "AIM352",
@@ -4329,7 +4329,7 @@
   "sessionLocation": "Venetian",
   "start": "2018-11-26T21:30:00.000Z",
   "end": "2018-11-26T22:30:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[REPEAT] Serverless Application Debugging and Delivery Best Practices",
   "abbreviation": "DEV307-R",
@@ -4701,7 +4701,7 @@
   "sessionLocation": "Venetian",
   "start": "2018-11-26T23:00:00.000Z",
   "end": "2018-11-27T01:15:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[REPEAT] Build Deep Learning Applications Using TensorFlow and Amazon SageMaker",
   "abbreviation": "AIM429-R",
@@ -4713,7 +4713,7 @@
   "sessionLocation": "Aria West",
   "start": "2018-11-26T23:00:00.000Z",
   "end": "2018-11-27T01:15:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[REPEAT] Optimizing Network Performance for Amazon EC2 Instances",
   "abbreviation": "CMP308-R",
@@ -4977,7 +4977,7 @@
   "sessionLocation": "Venetian",
   "start": "2018-11-27T00:30:00.000Z",
   "end": "2018-11-27T01:30:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "CI/CD for Your Machine Learning Pipeline with Amazon SageMaker",
   "abbreviation": "DVC303",
@@ -5025,7 +5025,7 @@
   "sessionLocation": "Bellagio",
   "start": "2018-11-27T00:30:00.000Z",
   "end": "2018-11-27T01:30:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "Building BMW Group's Customer Engagement Platform on AWS",
   "abbreviation": "AMT305",
@@ -5037,7 +5037,7 @@
   "sessionLocation": "MGM",
   "start": "2018-11-27T00:30:00.000Z",
   "end": "2018-11-27T01:30:00.000Z",
-  "topic": "Automitive"
+  "topic": "Automotive"
 }, {
   "title": "Nike’s Direct-to-Consumer Transformation",
   "abbreviation": "RET301-S",
@@ -5073,7 +5073,7 @@
   "sessionLocation": "Venetian",
   "start": "2018-11-27T00:30:00.000Z",
   "end": "2018-11-27T01:30:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "Developing well-architected Android apps with AWS",
   "abbreviation": "MOB302",
@@ -5493,7 +5493,7 @@
   "sessionLocation": "Aria East",
   "start": "2018-11-27T16:15:00.000Z",
   "end": "2018-11-27T17:15:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "Save Money and Migrate Faster with Rapid Discovery and Analysis",
   "abbreviation": "ENT331",
@@ -5901,7 +5901,7 @@
   "sessionLocation": "Venetian",
   "start": "2018-11-27T17:45:00.000Z",
   "end": "2018-11-27T18:45:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[REPEAT 1] The New Normal for Mission-Critical SAP Workloads",
   "abbreviation": "ENT219-R1",
@@ -6249,7 +6249,7 @@
   "sessionLocation": "MGM",
   "start": "2018-11-27T19:15:00.000Z",
   "end": "2018-11-27T21:30:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[REPEAT 1] Creating an Effective Roadmap for Your Cloud Journey",
   "abbreviation": "ENT225-R1",
@@ -6405,7 +6405,7 @@
   "sessionLocation": "Aria East",
   "start": "2018-11-27T19:15:00.000Z",
   "end": "2018-11-27T21:30:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "How to Effectively Plan for Disaster Recovery on AWS",
   "abbreviation": "CMP204-S",
@@ -6453,7 +6453,7 @@
   "sessionLocation": "Venetian",
   "start": "2018-11-27T20:00:00.000Z",
   "end": "2018-11-27T21:00:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[REPEAT] Create Immersive Experiences Using Amazon Sumerian",
   "abbreviation": "AVR204-R",
@@ -6705,7 +6705,7 @@
   "sessionLocation": "Aria West",
   "start": "2018-11-27T20:45:00.000Z",
   "end": "2018-11-27T21:45:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "How to Sell on AWS Marketplace",
   "abbreviation": "GPSMP202",
@@ -7065,7 +7065,7 @@
   "sessionLocation": "Mirage",
   "start": "2018-11-27T22:15:00.000Z",
   "end": "2018-11-28T00:30:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[REPEAT 1] Using Alexa Skills to Buy Digital Content: A Workshop for In-Skill Purchasing",
   "abbreviation": "ALX401-R1",
@@ -7221,7 +7221,7 @@
   "sessionLocation": "Venetian",
   "start": "2018-11-27T22:15:00.000Z",
   "end": "2018-11-27T23:15:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[REPEAT 1] Enterprise Governance and Security: Build Your AWS Landing Zone",
   "abbreviation": "SEC315-R1",
@@ -7473,7 +7473,7 @@
   "sessionLocation": "Aria East",
   "start": "2018-11-27T23:45:00.000Z",
   "end": "2018-11-28T00:45:00.000Z",
-  "topic": "Automitive"
+  "topic": "Automotive"
 }, {
   "title": "Building IoT Devices for Regulated Industries",
   "abbreviation": "LFS304-i",
@@ -8025,7 +8025,7 @@
   "sessionLocation": "Aria West",
   "start": "2018-11-27T15:30:00.000Z",
   "end": "2018-11-27T16:30:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "Serverless Analytics with Amazon QuickSight",
   "abbreviation": "ANT378",
@@ -8217,7 +8217,7 @@
   "sessionLocation": "Aria West",
   "start": "2018-11-27T17:00:00.000Z",
   "end": "2018-11-27T18:00:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[REPEAT 4] Add Screen Support to an Alexa Skill",
   "abbreviation": "ALX308-R4",
@@ -8409,7 +8409,7 @@
   "sessionLocation": "Aria West",
   "start": "2018-11-27T18:30:00.000Z",
   "end": "2018-11-27T19:30:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[REPEAT 5] Designing the Voice User Interface for an Alexa Skill",
   "abbreviation": "ALX311-R5",
@@ -8433,7 +8433,7 @@
   "sessionLocation": "Mirage",
   "start": "2018-11-27T18:30:00.000Z",
   "end": "2018-11-27T19:30:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[REPEAT 1] Build Internet-Scale Apps with Amazon DynamoDB",
   "abbreviation": "DAT357-R1",
@@ -8565,7 +8565,7 @@
   "sessionLocation": "Aria West",
   "start": "2018-11-27T20:00:00.000Z",
   "end": "2018-11-27T21:00:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "Building Your Notifications Workflow with AWS Step Functions",
   "abbreviation": "SRV310",
@@ -8733,7 +8733,7 @@
   "sessionLocation": "Aria West",
   "start": "2018-11-27T21:30:00.000Z",
   "end": "2018-11-27T22:30:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[REPEAT] Amazon Linux WorkSpaces for Developers",
   "abbreviation": "BAP304-R",
@@ -8817,7 +8817,7 @@
   "sessionLocation": "Aria West",
   "start": "2018-11-27T21:30:00.000Z",
   "end": "2018-11-27T22:30:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[REPEAT 2] Deploy Your Web App Safely with Blue-Green Deployments",
   "abbreviation": "DEV314-R2",
@@ -8985,7 +8985,7 @@
   "sessionLocation": "Aria West",
   "start": "2018-11-27T23:00:00.000Z",
   "end": "2018-11-28T00:00:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[REPEAT 2] Active Directory Domain Trusts and AWS SSO Jumpstart",
   "abbreviation": "WIN319-R2",
@@ -9165,7 +9165,7 @@
   "sessionLocation": "Aria West",
   "start": "2018-11-27T23:00:00.000Z",
   "end": "2018-11-28T00:00:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[REPEAT 1] Optimizing Your Immersive Application: Tips & Tricks from the Experts",
   "abbreviation": "AVR402-R1",
@@ -9297,7 +9297,7 @@
   "sessionLocation": "Mirage",
   "start": "2018-11-28T00:30:00.000Z",
   "end": "2018-11-28T01:30:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[REPEAT 3] Managing Application Costs and Performance Using AWS Auto Scaling",
   "abbreviation": "ENT323-R3",
@@ -9345,7 +9345,7 @@
   "sessionLocation": "Bellagio",
   "start": "2018-11-27T15:30:00.000Z",
   "end": "2018-11-27T16:30:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "How Jupiter Intel Uses AWS to Forecast Weather Impact & Climate Risk",
   "abbreviation": "CMP340",
@@ -9549,7 +9549,7 @@
   "sessionLocation": "Venetian",
   "start": "2018-11-27T16:15:00.000Z",
   "end": "2018-11-27T17:15:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[REPEAT] Serverless Anti-Patterns to Avoid",
   "abbreviation": "SRV361-R",
@@ -9705,7 +9705,7 @@
   "sessionLocation": "Aria East",
   "start": "2018-11-27T17:00:00.000Z",
   "end": "2018-11-27T18:00:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "Considerations for Building Your First Streaming Application",
   "abbreviation": "ANT359",
@@ -9729,7 +9729,7 @@
   "sessionLocation": "Venetian",
   "start": "2018-11-27T17:00:00.000Z",
   "end": "2018-11-27T18:00:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[REPEAT] Well-Architected for Security",
   "abbreviation": "SEC204-R",
@@ -10041,7 +10041,7 @@
   "sessionLocation": "Bellagio",
   "start": "2018-11-27T18:30:00.000Z",
   "end": "2018-11-27T19:30:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "Build a Real-Time Sales Analytics Dashboard with Amazon ElastiCache for Redis",
   "abbreviation": "DAT358",
@@ -10329,7 +10329,7 @@
   "sessionLocation": "Aria West",
   "start": "2018-11-27T20:00:00.000Z",
   "end": "2018-11-27T21:00:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "Extending Analytics Beyond the Data Warehouse",
   "abbreviation": "ANT301",
@@ -10365,7 +10365,7 @@
   "sessionLocation": "Mirage",
   "start": "2018-11-27T20:45:00.000Z",
   "end": "2018-11-27T21:45:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[REPEAT 1] Ask Me Anything about Amazon Aurora",
   "abbreviation": "DAT369-R1",
@@ -10605,7 +10605,7 @@
   "sessionLocation": "Venetian",
   "start": "2018-11-27T21:30:00.000Z",
   "end": "2018-11-27T22:30:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "Overview of Redis with Search and Graph",
   "abbreviation": "DAT334",
@@ -10797,7 +10797,7 @@
   "sessionLocation": "MGM",
   "start": "2018-11-27T23:00:00.000Z",
   "end": "2018-11-28T00:00:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[REPEAT] Working Backwards - Add Voice AI to Five Device Categories with Alexa",
   "abbreviation": "ALX329-R",
@@ -10989,7 +10989,7 @@
   "sessionLocation": "Bellagio",
   "start": "2018-11-27T23:45:00.000Z",
   "end": "2018-11-28T00:45:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "Container Security and Avoiding the 2:00 AM Call",
   "abbreviation": "CON347",
@@ -11025,7 +11025,7 @@
   "sessionLocation": "Aria West",
   "start": "2018-11-27T23:45:00.000Z",
   "end": "2018-11-28T00:45:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "Learn How You Can Accelerate Engineering Workloads with AppStream 2.0",
   "abbreviation": "BAP318",
@@ -11217,7 +11217,7 @@
   "sessionLocation": "Aria East",
   "start": "2018-11-28T01:15:00.000Z",
   "end": "2018-11-28T02:15:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[REPEAT 1] Improve Your Security Posture with AWS CloudFormation",
   "abbreviation": "DEV341-R1",
@@ -11781,7 +11781,7 @@
   "sessionLocation": "Mirage",
   "start": "2018-11-28T18:30:00.000Z",
   "end": "2018-11-28T19:30:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[REPEAT 1] Cloud Data Migration with Amazon EBS",
   "abbreviation": "CMP406-R1",
@@ -11805,7 +11805,7 @@
   "sessionLocation": "Aria West",
   "start": "2018-11-28T18:30:00.000Z",
   "end": "2018-11-28T19:30:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[REPEAT 3] Build a .NET CI/CD Pipeline with AWS & AWS Tools for Visual Studio Team Services",
   "abbreviation": "WIN313-R3",
@@ -11901,7 +11901,7 @@
   "sessionLocation": "Mirage",
   "start": "2018-11-28T20:00:00.000Z",
   "end": "2018-11-28T21:00:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[REPEAT 1] Create Your First AR/VR Scene in 60 Minutes",
   "abbreviation": "AVR205-R1",
@@ -12105,7 +12105,7 @@
   "sessionLocation": "Mirage",
   "start": "2018-11-28T20:00:00.000Z",
   "end": "2018-11-28T21:00:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[REPEAT 2] AWS Networking for Network Engineers",
   "abbreviation": "NET205-R2",
@@ -12249,7 +12249,7 @@
   "sessionLocation": "Mirage",
   "start": "2018-11-28T21:30:00.000Z",
   "end": "2018-11-28T22:30:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[REPEAT 3] Build a Real-Time Kibana Dashboard for Your Contact Center Data",
   "abbreviation": "BAP307-R3",
@@ -12357,7 +12357,7 @@
   "sessionLocation": "Aria West",
   "start": "2018-11-28T21:30:00.000Z",
   "end": "2018-11-28T22:30:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[REPEAT 1] Amazon SageMaker and Chainer: Tips & Tricks",
   "abbreviation": "AIM329-R1",
@@ -12369,7 +12369,7 @@
   "sessionLocation": "Mirage",
   "start": "2018-11-28T21:30:00.000Z",
   "end": "2018-11-28T22:30:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[REPEAT 2] Audit Your Device Fleet with AWS IoT Device Defender",
   "abbreviation": "IOT309-R2",
@@ -12597,7 +12597,7 @@
   "sessionLocation": "Mirage",
   "start": "2018-11-28T23:00:00.000Z",
   "end": "2018-11-29T00:00:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[REPEAT 7] Add Screen Support to an Alexa Skill",
   "abbreviation": "ALX308-R7",
@@ -13005,7 +13005,7 @@
   "sessionLocation": "Aria West",
   "start": "2018-11-29T00:30:00.000Z",
   "end": "2018-11-29T01:30:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[REPEAT 1] Amazon SageMaker: Custom Algorithms",
   "abbreviation": "AIM330-R1",
@@ -13017,7 +13017,7 @@
   "sessionLocation": "Aria West",
   "start": "2018-11-29T00:30:00.000Z",
   "end": "2018-11-29T01:30:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[REPEAT 2] Migrate Your SQL Server Database to Amazon RDS",
   "abbreviation": "DAT355-R2",
@@ -13173,7 +13173,7 @@
   "sessionLocation": "Mirage",
   "start": "2018-11-28T18:30:00.000Z",
   "end": "2018-11-28T19:30:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "Under the Hood of Amazon Route 53",
   "abbreviation": "ARC408",
@@ -13737,7 +13737,7 @@
   "sessionLocation": "Venetian",
   "start": "2018-11-28T21:30:00.000Z",
   "end": "2018-11-28T22:30:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "Build State-Of-the-Art NLP Models Using the Gluon API for Apache MXNet",
   "abbreviation": "AIM310",
@@ -13749,7 +13749,7 @@
   "sessionLocation": "Aria East",
   "start": "2018-11-28T21:30:00.000Z",
   "end": "2018-11-28T22:30:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[REPEAT] Automate Testing & Deployment of Modern Serverless Apps",
   "abbreviation": "API318-R",
@@ -13917,7 +13917,7 @@
   "sessionLocation": "Venetian",
   "start": "2018-11-28T22:15:00.000Z",
   "end": "2018-11-28T23:15:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "Finding the Best Fit: Deploying SQL Server on Amazon RDS & Amazon EC2",
   "abbreviation": "WIN318",
@@ -13953,7 +13953,7 @@
   "sessionLocation": "Aria West",
   "start": "2018-11-28T22:15:00.000Z",
   "end": "2018-11-28T23:15:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[REPEAT 1] Remove Undifferentiated Heavy Lifting from Jenkins",
   "abbreviation": "DEV201-R1",
@@ -14433,7 +14433,7 @@
   "sessionLocation": "Aria East",
   "start": "2018-11-29T01:15:00.000Z",
   "end": "2018-11-29T02:15:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[REPEAT 1] Update Microcontroller Devices Over-the-Air with Amazon FreeRTOS",
   "abbreviation": "IOT304-R1",
@@ -14541,7 +14541,7 @@
   "sessionLocation": "Aria East",
   "start": "2018-11-29T02:00:00.000Z",
   "end": "2018-11-29T03:00:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "Customer Story: Dow Jones’s Path to the Cloud with BMC on AWS",
   "abbreviation": "DEM02",
@@ -14697,7 +14697,7 @@
   "sessionLocation": "MGM",
   "start": "2018-11-28T18:30:00.000Z",
   "end": "2018-11-28T19:30:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[REPEAT] Deconstructing SaaS: Deep Dive into Building Multi-Tenant Solutions on AWS",
   "abbreviation": "ARC418",
@@ -14721,7 +14721,7 @@
   "sessionLocation": "Aria East",
   "start": "2018-11-28T18:30:00.000Z",
   "end": "2018-11-28T19:30:00.000Z",
-  "topic": "Automitive"
+  "topic": "Automotive"
 }, {
   "title": "Elastic Load Balancing: Deep Dive and Best Practices",
   "abbreviation": "NET404",
@@ -14889,7 +14889,7 @@
   "sessionLocation": "Venetian",
   "start": "2018-11-28T19:15:00.000Z",
   "end": "2018-11-28T20:15:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "Monitor All Your Things: Amazon CloudWatch in Action with BBC",
   "abbreviation": "DEV302",
@@ -15093,7 +15093,7 @@
   "sessionLocation": "Bellagio",
   "start": "2018-11-28T20:00:00.000Z",
   "end": "2018-11-28T21:00:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "Build Business-Ready Blockchains with Intelligence",
   "abbreviation": "GPSTEC315",
@@ -15201,7 +15201,7 @@
   "sessionLocation": "Venetian",
   "start": "2018-11-28T20:45:00.000Z",
   "end": "2018-11-28T21:45:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "Game On! Building Hulu’s Real-Time Notification Platform for Live TV with Pinpoint",
   "abbreviation": "MOB304",
@@ -15237,7 +15237,7 @@
   "sessionLocation": "Venetian",
   "start": "2018-11-28T20:45:00.000Z",
   "end": "2018-11-28T21:45:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "Migrate Workloads with Large Storage and I/O Demands",
   "abbreviation": "GPSTEC311",
@@ -15393,7 +15393,7 @@
   "sessionLocation": "MGM",
   "start": "2018-11-28T21:30:00.000Z",
   "end": "2018-11-28T22:30:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "Migrating Databases to the Cloud with AWS Database Migration Service",
   "abbreviation": "DAT207",
@@ -15981,7 +15981,7 @@
   "sessionLocation": "Aria East",
   "start": "2018-11-28T23:00:00.000Z",
   "end": "2018-11-29T00:00:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[REPEAT] A Serverless Journey: AWS Lambda Under the Hood",
   "abbreviation": "SRV318-R",
@@ -16089,7 +16089,7 @@
   "sessionLocation": "MGM",
   "start": "2018-11-28T23:45:00.000Z",
   "end": "2018-11-29T00:45:00.000Z",
-  "topic": "Automitive"
+  "topic": "Automotive"
 }, {
   "title": "Landing Zone Design: What to Do When Your Company Splits in Half",
   "abbreviation": "ENT318",
@@ -16149,7 +16149,7 @@
   "sessionLocation": "Venetian",
   "start": "2018-11-28T23:45:00.000Z",
   "end": "2018-11-29T00:45:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "Simplifying Microsoft Architectures with AWS Services",
   "abbreviation": "WIN306",
@@ -16485,7 +16485,7 @@
   "sessionLocation": "Venetian",
   "start": "2018-11-29T02:00:00.000Z",
   "end": "2018-11-29T03:00:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "Migrate Your Hadoop/Spark Workload to Amazon EMR and Architect It for Security and Governance on AWS",
   "abbreviation": "ANT312",
@@ -16557,7 +16557,7 @@
   "sessionLocation": "Mirage",
   "start": "2018-11-28T18:30:00.000Z",
   "end": "2018-11-28T20:45:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "AWS Serverless Interface Building and Cerner's FHIR Experience",
   "abbreviation": "HLC401",
@@ -16653,7 +16653,7 @@
   "sessionLocation": "Aria East",
   "start": "2018-11-28T19:15:00.000Z",
   "end": "2018-11-28T21:30:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[REPEAT 1] Build Deep Learning Applications Using TensorFlow and Amazon SageMaker",
   "abbreviation": "AIM429-R1",
@@ -16665,7 +16665,7 @@
   "sessionLocation": "MGM",
   "start": "2018-11-28T19:15:00.000Z",
   "end": "2018-11-28T21:30:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[REPEAT] Building Your Own ML Application with AWS Lambda and Amazon SageMaker",
   "abbreviation": "SRV404-R",
@@ -16725,7 +16725,7 @@
   "sessionLocation": "Mirage",
   "start": "2018-11-28T19:15:00.000Z",
   "end": "2018-11-28T21:30:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "Accelerate Your C/C++ Applications with Amazon EC2 F1 Instances",
   "abbreviation": "CMP405",
@@ -16761,7 +16761,7 @@
   "sessionLocation": "MGM",
   "start": "2018-11-28T21:30:00.000Z",
   "end": "2018-11-28T23:45:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "Hands-On: Deploy Remote Graphics Desktops for Content Production",
   "abbreviation": "CMP422",
@@ -16857,7 +16857,7 @@
   "sessionLocation": "Mirage",
   "start": "2018-11-28T22:15:00.000Z",
   "end": "2018-11-29T00:30:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[REPEAT 1] Build, Train, and Deploy ML Models with Amazon SageMaker",
   "abbreviation": "AIM410-R1",
@@ -16869,7 +16869,7 @@
   "sessionLocation": "Venetian",
   "start": "2018-11-28T22:15:00.000Z",
   "end": "2018-11-29T00:30:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[REPEAT] Monitoring for Operational Outcomes and Application Insights: Best Practices",
   "abbreviation": "DEV306-R",
@@ -16905,7 +16905,7 @@
   "sessionLocation": "Mirage",
   "start": "2018-11-28T22:15:00.000Z",
   "end": "2018-11-29T00:30:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[REPEAT 1] Building Serverless Applications with GraphQL and Graph Databases",
   "abbreviation": "SRV307-R1",
@@ -17037,7 +17037,7 @@
   "sessionLocation": "Mirage",
   "start": "2018-11-29T18:30:00.000Z",
   "end": "2018-11-29T20:45:00.000Z",
-  "topic": "Automitive"
+  "topic": "Automotive"
 }, {
   "title": "[REPEAT 1] Manage Certificate Expiration and Key Rotation at scale on AWS",
   "abbreviation": "SEC405-R1",
@@ -17193,7 +17193,7 @@
   "sessionLocation": "Mirage",
   "start": "2018-11-29T19:15:00.000Z",
   "end": "2018-11-29T21:30:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[REPEAT 1] Managing Identity Management, Authentication, and Authorization for Serverless Applications",
   "abbreviation": "SRV306-R1",
@@ -17229,7 +17229,7 @@
   "sessionLocation": "Bellagio",
   "start": "2018-11-29T19:15:00.000Z",
   "end": "2018-11-29T21:30:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[REPEAT 2] Building Your First Graph Application with Amazon Neptune - Workshop",
   "abbreviation": "DAT310-R2",
@@ -17517,7 +17517,7 @@
   "sessionLocation": "Venetian",
   "start": "2018-11-29T22:15:00.000Z",
   "end": "2018-11-30T00:30:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[REPEAT 1] Leveraging the AWS Cloud Adoption Framework to Build Your Cloud Action Plan",
   "abbreviation": "ENT208-R1",
@@ -17553,7 +17553,7 @@
   "sessionLocation": "MGM",
   "start": "2018-11-29T22:15:00.000Z",
   "end": "2018-11-30T00:30:00.000Z",
-  "topic": "Automitive"
+  "topic": "Automotive"
 }, {
   "title": "[REPEAT 2] Instrumenting Kubernetes for Observability Using AWS X-Ray and Amazon CloudWatch",
   "abbreviation": "DEV303-R2",
@@ -17601,7 +17601,7 @@
   "sessionLocation": "Mirage",
   "start": "2018-11-29T22:15:00.000Z",
   "end": "2018-11-30T00:30:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[REPEAT 1] Set Up a Million-Core Cluster to Accelerate HPC Workloads",
   "abbreviation": "CMP404-R1",
@@ -17745,7 +17745,7 @@
   "sessionLocation": "Aria West",
   "start": "2018-11-29T18:30:00.000Z",
   "end": "2018-11-29T19:30:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "Building Well Architected .NET Apps",
   "abbreviation": "WIN304",
@@ -17781,7 +17781,7 @@
   "sessionLocation": "MGM",
   "start": "2018-11-29T18:30:00.000Z",
   "end": "2018-11-29T19:30:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[REPEAT 1] Reliability of the Cloud: How AWS Achieves High Availability",
   "abbreviation": "ARC317-R1",
@@ -17865,7 +17865,7 @@
   "sessionLocation": "Venetian",
   "start": "2018-11-29T18:30:00.000Z",
   "end": "2018-11-29T19:30:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "Unlock Highly Regulated Enterprise Workloads with SaaS on AWS GovCloud (US)",
   "abbreviation": "WPS303",
@@ -17997,7 +17997,7 @@
   "sessionLocation": "Venetian",
   "start": "2018-11-29T19:15:00.000Z",
   "end": "2018-11-29T20:15:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "Best Practices for Scalable Monitoring",
   "abbreviation": "ENT310-S",
@@ -18261,7 +18261,7 @@
   "sessionLocation": "Aria East",
   "start": "2018-11-29T19:15:00.000Z",
   "end": "2018-11-29T20:15:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[REPEAT 1] Best Practices: Building Private Serverless Microservices in your VPC",
   "abbreviation": "SRV349-R1",
@@ -18393,7 +18393,7 @@
   "sessionLocation": "Aria East",
   "start": "2018-11-29T20:00:00.000Z",
   "end": "2018-11-29T21:00:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[REPEAT] How to Get the Most out of TTS for Your Alexa Skill",
   "abbreviation": "ALX342-R",
@@ -18465,7 +18465,7 @@
   "sessionLocation": "MGM",
   "start": "2018-11-29T20:00:00.000Z",
   "end": "2018-11-29T21:00:00.000Z",
-  "topic": "Automitive"
+  "topic": "Automotive"
 }, {
   "title": "ML Best Practices: Prepare Data, Build Models, and Manage Lifecycle",
   "abbreviation": "ANT338-S",
@@ -18621,7 +18621,7 @@
   "sessionLocation": "Mirage",
   "start": "2018-11-29T20:45:00.000Z",
   "end": "2018-11-29T21:45:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[REPEAT] Optimizing Performance in Amazon S3",
   "abbreviation": "STG367-R",
@@ -18693,7 +18693,7 @@
   "sessionLocation": "Venetian",
   "start": "2018-11-29T20:45:00.000Z",
   "end": "2018-11-29T21:45:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "Sequence-to-Sequence Modeling with Apache MXNet, Sockeye, and Amazon SageMaker",
   "abbreviation": "AIM414",
@@ -18705,7 +18705,7 @@
   "sessionLocation": "Venetian",
   "start": "2018-11-29T20:45:00.000Z",
   "end": "2018-11-29T21:45:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[REPEAT 1] Deep Learning Applications Using TensorFlow",
   "abbreviation": "AIM401-R1",
@@ -18717,7 +18717,7 @@
   "sessionLocation": "Venetian",
   "start": "2018-11-29T20:45:00.000Z",
   "end": "2018-11-29T21:45:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[REPEAT 2] Instrumenting Applications for Observability Using AWS X-Ray",
   "abbreviation": "DEV402-R2",
@@ -18897,7 +18897,7 @@
   "sessionLocation": "MGM",
   "start": "2018-11-29T20:45:00.000Z",
   "end": "2018-11-29T21:45:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "Automating Compliance Certification with Automated Mathematical Proof",
   "abbreviation": "SEC330",
@@ -19005,7 +19005,7 @@
   "sessionLocation": "Venetian",
   "start": "2018-11-29T21:30:00.000Z",
   "end": "2018-11-29T22:30:00.000Z",
-  "topic": "Automitive"
+  "topic": "Automotive"
 }, {
   "title": "Resolving NLP Problems Using Amazon SageMaker Algorithms",
   "abbreviation": "GPSCT305",
@@ -19509,7 +19509,7 @@
   "sessionLocation": "MGM",
   "start": "2018-11-29T22:15:00.000Z",
   "end": "2018-11-29T23:15:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "Another Day in the Life of a Cloud Network Engineer at Netflix",
   "abbreviation": "NET312",
@@ -19677,7 +19677,7 @@
   "sessionLocation": "Aria East",
   "start": "2018-11-29T23:00:00.000Z",
   "end": "2018-11-30T00:00:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "Voice Assistants Beyond Smart Speakers - Integrate Alexa into Your Unique Product",
   "abbreviation": "ALX305",
@@ -19701,7 +19701,7 @@
   "sessionLocation": "Venetian",
   "start": "2018-11-29T23:00:00.000Z",
   "end": "2018-11-30T00:00:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "Accelerate Your Analytic Queries with Amazon Aurora Parallel Query",
   "abbreviation": "DAT362",
@@ -19857,7 +19857,7 @@
   "sessionLocation": "Mirage",
   "start": "2018-11-29T23:00:00.000Z",
   "end": "2018-11-30T00:00:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[REPEAT 1] Managing Connected Devices at Scale with AWS IoT Device Management",
   "abbreviation": "IOT207-R1",
@@ -19977,7 +19977,7 @@
   "sessionLocation": "Aria West",
   "start": "2018-11-29T18:30:00.000Z",
   "end": "2018-11-29T19:30:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[REPEAT 1] Security Incident Automation for PCI DSS Compliance",
   "abbreviation": "FSV402-R1",
@@ -20013,7 +20013,7 @@
   "sessionLocation": "Mirage",
   "start": "2018-11-29T18:30:00.000Z",
   "end": "2018-11-29T19:30:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[REPEAT 1] AWS Tools for PowerShell",
   "abbreviation": "DEV334-R1",
@@ -20121,7 +20121,7 @@
   "sessionLocation": "Mirage",
   "start": "2018-11-29T18:30:00.000Z",
   "end": "2018-11-29T19:30:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[REPEAT 1] Build a Serverless Online Analytical Processing App for Financial Services",
   "abbreviation": "FSV403-R",
@@ -20169,7 +20169,7 @@
   "sessionLocation": "Aria West",
   "start": "2018-11-29T20:00:00.000Z",
   "end": "2018-11-29T21:00:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[REPEAT 1] Building High-Scale Web Apps on Amazon EC2 Fleet",
   "abbreviation": "CMP409-R1",
@@ -20409,7 +20409,7 @@
   "sessionLocation": "Mirage",
   "start": "2018-11-29T20:00:00.000Z",
   "end": "2018-11-29T21:00:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[REPEAT 4] Which Database Should I Use?",
   "abbreviation": "DAT356-R4",
@@ -20445,7 +20445,7 @@
   "sessionLocation": "Aria West",
   "start": "2018-11-29T21:30:00.000Z",
   "end": "2018-11-29T22:30:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "Top Four Ways to Leverage Machine Learning on a Mobile Device",
   "abbreviation": "MOB309",
@@ -20661,7 +20661,7 @@
   "sessionLocation": "Mirage",
   "start": "2018-11-29T21:30:00.000Z",
   "end": "2018-11-29T22:30:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[REPEAT 2] Empower Lean Teams with Centrally Governed CI/CD Pipelines Using AWS CodePipeline & AWS Service Catalog",
   "abbreviation": "DEV332-R2",
@@ -20721,7 +20721,7 @@
   "sessionLocation": "Mirage",
   "start": "2018-11-29T23:00:00.000Z",
   "end": "2018-11-30T00:00:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[REPEAT 11] Build Your First Alexa Skill",
   "abbreviation": "ALX307-R11",
@@ -20841,7 +20841,7 @@
   "sessionLocation": "Aria West",
   "start": "2018-11-29T23:00:00.000Z",
   "end": "2018-11-30T00:00:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[REPEAT 3] Build on Amazon Aurora with PostgreSQL Compatibility",
   "abbreviation": "DAT350-R3",
@@ -20877,7 +20877,7 @@
   "sessionLocation": "Aria West",
   "start": "2018-11-29T23:00:00.000Z",
   "end": "2018-11-30T00:00:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[REPEAT 11] Speed Alexa Skills Development with the ASK CLI",
   "abbreviation": "ALX310-R11",
@@ -21009,7 +21009,7 @@
   "sessionLocation": "Mirage",
   "start": "2018-11-30T15:30:00.000Z",
   "end": "2018-11-30T17:45:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[REPEAT 1] Well Operated: A Day in the Life of a Cloud Ops Engineer",
   "abbreviation": "ENT312-R1",
@@ -21033,7 +21033,7 @@
   "sessionLocation": "Venetian",
   "start": "2018-11-30T15:30:00.000Z",
   "end": "2018-11-30T16:30:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[REPEAT 2] AWS Tools for PowerShell",
   "abbreviation": "DEV334-R2",
@@ -21057,7 +21057,7 @@
   "sessionLocation": "Mirage",
   "start": "2018-11-30T15:30:00.000Z",
   "end": "2018-11-30T16:30:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[REPEAT 1] Modern Cloud Data Warehousing ft. Intuit: Optimize Analytics Practices",
   "abbreviation": "ANT202-R1",
@@ -21153,7 +21153,7 @@
   "sessionLocation": "Mirage",
   "start": "2018-11-30T15:30:00.000Z",
   "end": "2018-11-30T16:30:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[REPEAT 6] Move Your First Application to the Cloud with Amazon Lightsail",
   "abbreviation": "CMP412-R6",
@@ -21225,7 +21225,7 @@
   "sessionLocation": "Mirage",
   "start": "2018-11-30T15:30:00.000Z",
   "end": "2018-11-30T16:30:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "Best Practices to Secure Data Lake on AWS",
   "abbreviation": "ANT327",
@@ -21249,7 +21249,7 @@
   "sessionLocation": "Mirage",
   "start": "2018-11-30T15:30:00.000Z",
   "end": "2018-11-30T16:30:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[REPEAT] Migrating Data to the Cloud: Exploring Your Options from AWS",
   "abbreviation": "STG205-R",
@@ -21429,7 +21429,7 @@
   "sessionLocation": "Mirage",
   "start": "2018-11-30T16:15:00.000Z",
   "end": "2018-11-30T18:30:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[REPEAT 1] Build a Multi-Region Serverless Application for Resilience & High Availability",
   "abbreviation": "SRV326-R1",
@@ -21597,7 +21597,7 @@
   "sessionLocation": "Mirage",
   "start": "2018-11-30T17:00:00.000Z",
   "end": "2018-11-30T18:00:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[REPEAT 1] How Financial Institutions Can Securely Migrate Commercial Databases to Aurora",
   "abbreviation": "FSV401-R1",
@@ -21873,7 +21873,7 @@
   "sessionLocation": "Venetian",
   "start": "2018-11-30T17:45:00.000Z",
   "end": "2018-11-30T18:45:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[REPEAT 2] Deep Learning Applications Using PyTorch",
   "abbreviation": "AIM402-R2",
@@ -21885,7 +21885,7 @@
   "sessionLocation": "Venetian",
   "start": "2018-11-30T17:45:00.000Z",
   "end": "2018-11-30T18:45:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "Use HPC on AWS for Physics-Based Simulation, ML, and Statistics in CAE",
   "abbreviation": "CMP326",
@@ -21969,7 +21969,7 @@
   "sessionLocation": "Mirage",
   "start": "2018-11-30T18:30:00.000Z",
   "end": "2018-11-30T19:30:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[REPEAT 2] Data Lake Implementation: Processing and Querying Data in Place",
   "abbreviation": "STG204-R2",
@@ -22089,7 +22089,7 @@
   "sessionLocation": "Venetian",
   "start": "2018-11-30T18:30:00.000Z",
   "end": "2018-11-30T19:30:00.000Z",
-  "topic": "Artificial Intelligence & Machine Learning"
+  "topic": "AI & Machine Learning"
 }, {
   "title": "[REPEAT 3] Best Practices for Working with Large-Scale Geospatial Imagery",
   "abbreviation": "WPS302-R3",

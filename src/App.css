@@ -13,11 +13,40 @@
   flex-direction: column;
 }
 
-.controls { flex: 0 0 200px; }
+.controls { flex: 0 0 350px; }
 .calendar { flex: 0 1 100%; }
-.topics { flex: 1 1 auto; }
-.locations { flex: 1 1 auto; }
+.topics { flex: 0 1 75%; }
+.locations { flex: 0 1 25%; }
 
 .scrollable {
   overflow: auto;
+}
+
+.chooser {
+  font-size: 1.2rem;
+  padding: 1rem;
+}
+
+.chooser .color-label {
+  width: 1.2rem;
+  height: 1.2rem;
+  display: inline-block;
+  position: relative;
+  top: 2px;
+  margin: 0 0.2rem;
+  border-radius: 0.2rem;
+}
+
+.chooser .title {
+  margin-bottom: 0.5rem;
+}
+
+.chooser .title b {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+
+.chooser .title a {
+  float: right;
+  margin-right: 0.5rem;
 }
