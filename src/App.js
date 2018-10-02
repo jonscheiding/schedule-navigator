@@ -2,17 +2,21 @@ import React, { Component } from 'react';
 import Calendar from 'react-big-calendar';
 import moment from 'moment';
 import randomId from 'random-id';
+import cx from 'classnames';
+import { desaturate, darken, transparentize } from 'polished';
 
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 import './App.css'
 
 import EventsStore from './EventsStore';
-import { desaturate } from 'polished';
 
 class App extends Component {
   constructor() { super(); 
     this.eventStore = new EventsStore();
     this.state = this.createStateFromStore();
+
+    this.getEventProps = this.getEventProps.bind(this);
+    this.eventDoubleClicked = this.eventDoubleClicked.bind(this);
   }
 
   setStateFromStore() {
@@ -78,9 +82,10 @@ class App extends Component {
         events={this.state.events}
         localizer={Calendar.momentLocalizer(moment)}
         style={{ height: "100%" }} 
-        eventPropGetter={e => ({ style: this.getStyle(e) })}
+        eventPropGetter={this.getEventProps}
         titleAccessor={e => e.abbreviation + ' - ' + e.title}
-        onDoubleClickEvent={e => this.eventDoubleClicked(e)}
+        tooltipAccessor={e => e.title + ': ' + e.abstract}
+        onDoubleClickEvent={this.eventDoubleClicked}
         min={new Date(2018, 10, 25, 10, 0)}
         max={new Date(2018, 10, 25, 22, 0)}
         />
@@ -141,21 +146,27 @@ class App extends Component {
   eventDoubleClicked(event) {
     this.eventStore.toggleInterested(event);
     this.setStateFromStore();
+    return false;
   }
 
-  getStyle(e) {
-    const style = {
-      color: 'black',
-      backgroundColor: e.color
-    };
-
-    if(this.state.interested[e.id]) {
-      style.fontWeight = 'bold';
-    } else {
-      style.backgroundColor = desaturate(0.25, style.backgroundColor);
+  getEventProps(e, start, end, isSelected) {
+    let backgroundColor = desaturate(0.25, e.color);
+    let borderColor = darken(0.2, backgroundColor);
+    
+    if(!isSelected) {
+      backgroundColor = transparentize(0.1, backgroundColor);
     }
 
-    return style;
+    return {
+      className: cx('event', {
+        'selected': isSelected,
+        'interested': this.state.interested[e.id]
+      }),
+      style: {
+        backgroundColor: backgroundColor,
+        borderColor: borderColor,
+      }
+    };
   }
 }
 

@@ -54,3 +54,16 @@
   text-decoration: underline;
   cursor: pointer;
 }
+
+.event {
+  color: black;
+}
+
+.event.selected {
+  z-index: 2;
+  box-shadow: 0px 0px 10px #0009;
+}
+
+.event.interested {
+  font-weight: bold;
+}

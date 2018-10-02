@@ -9,7 +9,7 @@ for(const event of events) {
 
 export default class EventsStore {
   constructor() {
-    this.events = events.filter(e => e.title.startsWith('A'));
+    this.events = events;
 
     this.topics = this._createFilterMap(e => e.topic, 'topic');
     this.locations = this._createFilterMap(e => e.sessionLocation, 'location');
