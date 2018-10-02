@@ -29,8 +29,7 @@ class App extends Component {
       topics: this.eventStore.topics,
       locations: this.eventStore.locations,
       interested: this.eventStore.interested,
-      colorBy: this.eventStore.colorBy,
-      excludeNotInterested: this.eventStore.excludeNotInterested
+      colorBy: this.eventStore.colorBy
     };
   }
 
@@ -116,11 +115,6 @@ class App extends Component {
     for(const key of Object.keys(choices)) {
       this.eventStore.updateIncluded(choices[key], isIncluded);
     }
-    this.setStateFromStore();
-  }
-
-  updateExcludeNotInterested(value) {
-    this.eventStore.updateExcludeNotInterested(value);
     this.setStateFromStore();
   }
 
