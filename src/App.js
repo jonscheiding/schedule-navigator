@@ -72,8 +72,8 @@ class App extends Component {
   renderCalendar() {
     return (
       <Calendar
-        defaultDate={new Date(2018, 10, 25)}
-        defaultView="week"
+        defaultDate={new Date(2018, 10, 26)}
+        defaultView="day"
         views={['day', 'week']}
         events={this.state.events}
         localizer={Calendar.momentLocalizer(moment)}
