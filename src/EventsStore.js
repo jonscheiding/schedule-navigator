@@ -15,15 +15,13 @@ export default class EventsStore {
     this.locations = this._createFilterMap(e => e.sessionLocation, 'location');
     this.interested = this._createInterestedMap();
     this.colorBy = 'location';
-    this.excludeNotInterested = false;
   }
 
   getFilteredList() {
     return this.events
-      .filter(e =>
-        this.topics[e.topic].isIncluded &&
-        this.locations[e.sessionLocation].isIncluded &&
-        (this.interested[e.id] || !this.excludeNotInterested))
+      .filter(e => this.interested[e.id] ||
+        (this.topics[e.topic].isIncluded &&
+        this.locations[e.sessionLocation].isIncluded))
       .map(e => ({
         ...e,
         color: this._getColor(e)
@@ -47,10 +45,6 @@ export default class EventsStore {
   updateIncluded(choice, isIncluded) {
     choice.isIncluded = isIncluded;
     localStorage.setItem(`${choice.type}/${choice.value}/isIncluded`, isIncluded);
-  }
-
-  updateExcludeNotInterested(value) {
-    this.excludeNotInterested = value;
   }
 
   _getColor(e) {

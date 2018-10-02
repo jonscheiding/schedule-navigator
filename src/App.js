@@ -45,29 +45,10 @@ class App extends Component {
             <div className='locations chooser scrollable'>
               {this.renderChooser(this.state.locations, 'location')}
             </div>
-            <div className='options chooser'>
-              {this.renderOptions()}
-            </div>
           </div>
         </div>
         <div className='calendar scrollable'>
           {this.renderCalendar()}
-        </div>
-      </div>
-    );
-  }
-
-  renderOptions() {
-    const id = 'option-' + randomId();
-
-    return (
-      <div>
-        <div className='title'><b>Options</b></div>
-        <div>
-          <input type='checkbox' id={id}
-            checked={this.state.excludeNotInterested}
-            onChange={e => this.updateExcludeNotInterested(e.target.checked)} />
-          <label htmlFor={id}>Only Interested</label>
         </div>
       </div>
     );
