@@ -1,25 +1,45 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Calendar from 'react-big-calendar';
+import moment from 'moment';
+
+import 'react-big-calendar/lib/css/react-big-calendar.css';
+
+import './App.css'
+import events from './events.json';
+
+for(const event of events) {
+  event.start = new Date(Date.parse(event.start));
+  event.end = new Date(Date.parse(event.end));
+}
+
+const localizer = Calendar.momentLocalizer(moment);
 
 class App extends Component {
   render() {
+    const someEvents = events.filter(e => e.type === 'Demo Session');
+
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div className='main container'>
+        <div className='controls'>
+          <div className='vertical container'>
+            <div className='topics scrollable'>TOPICS</div>
+            <div className='locations scrollable'>LOCATIONS</div>
+          </div>
+        </div>
+        <div className='calendar scrollable'>
+          <Calendar
+            defaultDate={new Date(2018, 10, 25)}
+            defaultView="week"
+            views={['day', 'week']}
+            events={someEvents}
+            localizer={localizer}
+            style={{ height: "200%" }} 
+            titleAccessor={e => e.abbreviation + ' - ' + e.title}
+            elementProps={{ style: { height: '200%' }}}
+            min={new Date(2018, 10, 25, 9, 0)}
+            max={new Date(2018, 10, 25, 21, 0)}
+            />
+        </div>
       </div>
     );
   }
