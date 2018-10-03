@@ -94,8 +94,8 @@ class App extends Component {
     };
 
     const settings = {
-      min: new Date(2018, 10, 25, 8, 30),
-      max: new Date(2018, 10, 25, 21, 30),
+      min: new Date(2018, 10, 25, 8, 0),
+      max: new Date(2018, 10, 25, 22, 0),
       defaultDate: new Date(2018, 10, 26),
       defaultView: 'day',
       views: ['day', 'week', 'agenda'],
