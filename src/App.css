@@ -15,8 +15,9 @@
 
 .controls { flex: 0 0 350px; }
 .events { flex: 0 1 100%; }
-.topics { flex: 0 1 75%; }
-.locations { flex: 0 1 25%; }
+.topics { flex: 0 1 100%; }
+.locations { flex: 0 1 auto; }
+.options { flex: 0 1 auto; }
 
 .events .calendar { flex: 0 1 100%; }
 .events .current-event { flex: 0 1 250px; }
@@ -40,7 +41,7 @@ p { margin: 0 }
 
 .chooser {
   font-size: 1.2rem;
-  padding: 1rem;
+  padding: 0.5rem;
 }
 
 .chooser .color-label {

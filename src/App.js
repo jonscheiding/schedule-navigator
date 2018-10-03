@@ -18,6 +18,7 @@ class App extends Component {
     this.getEventProps = this.getEventProps.bind(this);
     this.handleEventDoubleClick = this.handleEventDoubleClick.bind(this);
     this.handleEventSelect = this.handleEventSelect.bind(this);
+    this.handleAlwaysShowInterestedCheckboxChange = this.handleAlwaysShowInterestedCheckboxChange.bind(this);
   }
 
   setStateFromStore() {
@@ -43,8 +44,11 @@ class App extends Component {
             <div className='topics chooser scrollable'>
               {this.renderChooser(this.state.topics, 'topic')}
             </div>
-            <div className='locations chooser scrollable'>
+            <div className='locations chooser'>
               {this.renderChooser(this.state.locations, 'location')}
+            </div>
+            <div className='options chooser'>
+              {this.renderOptions()}
             </div>
           </div>
         </div>
@@ -67,7 +71,7 @@ class App extends Component {
       <Calendar
         defaultDate={new Date(2018, 10, 26)}
         defaultView="day"
-        views={['day', 'week']}
+        views={['day', 'week', 'agenda']}
         events={this.state.events}
         localizer={Calendar.momentLocalizer(moment)}
         style={{ height: "100%" }} 
@@ -116,6 +120,20 @@ class App extends Component {
     )
   }
 
+  renderOptions() {
+    const id = 'always-interested-' + randomId();
+
+    return (
+      <div>
+        <div className='title'><b>Options</b></div>
+        <input type='checkbox' id={id}
+          checked={this.eventStore.alwaysShowInterested}
+          onChange={this.handleAlwaysShowInterestedCheckboxChange} />
+        <label htmlFor={id}>Always show interested events</label>
+      </div>
+    )
+  }
+
   renderChooser(choices, title) {
     const keys = Object.keys(choices).sort();
 
@@ -148,6 +166,11 @@ class App extends Component {
         </label>
       </div>
     );
+  }
+
+  handleAlwaysShowInterestedCheckboxChange(e) {
+    this.eventStore.alwaysShowInterested = e.target.checked;
+    this.setStateFromStore();
   }
 
   handleInterestedCheckboxChange(e, event) {

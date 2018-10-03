@@ -17,13 +17,14 @@ export default class EventsStore {
     this.locations = this._createFilterMap(e => e.sessionLocation, 'location');
     this.interested = this._createInterestedMap();
     this.colorBy = 'location';
+    this.alwaysShowInterested = true;
   }
 
   getFilteredList() {
     return this.events
-      .filter(e => this.interested[e.id] ||
-        (this.topics[e.topic].isIncluded &&
-        this.locations[e.sessionLocation].isIncluded))
+      .filter(e => 
+        (this.interested[e.id] && this.alwaysShowInterested) ||
+        (this.topics[e.topic].isIncluded && this.locations[e.sessionLocation].isIncluded))
       .map(e => ({
         ...e,
         color: this._getColor(e)
