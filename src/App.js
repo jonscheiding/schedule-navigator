@@ -82,8 +82,8 @@ class App extends Component {
 
   renderCalendar() {
     const accessors = {
-      startAccessor: e => this.convertTime(e.start),
-      endAccessor: e => this.convertTime(e.end),
+      startAccessor: e => this.convertToEventLocalTime(e.start),
+      endAccessor: e => this.convertToEventLocalTime(e.end),
       titleAccessor: e => e.abbreviation + ' ' + e.title,
       tooltipAccessor: e => e.abbreviation + ' ' + e.title
     };
@@ -96,6 +96,7 @@ class App extends Component {
     const settings = {
       min: new Date(2018, 10, 25, 8, 0),
       max: new Date(2018, 10, 25, 22, 0),
+      timeslots: 4,
       defaultDate: new Date(2018, 10, 26),
       defaultView: 'day',
       views: ['day', 'week', 'agenda'],
@@ -128,8 +129,8 @@ class App extends Component {
           <div>{event.topic}</div>
           <div><i>{event.type}</i></div>
           <div>
-            {moment(event.start).format('h:mm a')} -
-            {moment(event.end).format('h:mm a')}
+            {moment(this.convertToEventLocalTime(event.start)).format('h:mm a')} -
+            {moment(this.convertToEventLocalTime(event.end)).format('h:mm a')}
           </div>
           <div className='interested'>
             <InputWithLabel type='checkbox'
@@ -253,7 +254,7 @@ class App extends Component {
     return false;
   }
 
-  convertTime = (date) => {
+  convertToEventLocalTime = (date) => {
     if(!(date instanceof Date)) { return date; }
     
     const adjustment = PST_OFFSET - date.getTimezoneOffset();
