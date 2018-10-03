@@ -19,6 +19,7 @@ export default class EventsStore {
     this.interested = this._createInterestedMap();
     this.colorBy = 'location';
     this.alwaysShowInterested = true;
+    this.hideNotInterested = false;
   }
 
   getFilteredList() {
@@ -28,7 +29,8 @@ export default class EventsStore {
         (
           this.topics[e.topic].isIncluded && 
           this.locations[e.sessionLocation].isIncluded &&
-          this.types[e.type].isIncluded
+          this.types[e.type].isIncluded &&
+          (this.interested[e.id] || !this.hideNotInterested)
         ))
       .map(e => ({
         ...e,

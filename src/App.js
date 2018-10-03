@@ -16,10 +16,10 @@ const CheckboxWithLabel = ({id, children, ...props}) => {
   }
 
   return (
-    <span>
+    <div className='checkbox'>
       <input type='checkbox' id={id} {...props} />
       <label htmlFor={id}>{children}</label>
-    </span>
+    </div>
   )
 }
 
@@ -139,7 +139,14 @@ class App extends Component {
           <CheckboxWithLabel
             checked={this.eventStore.alwaysShowInterested}
             onChange={this.handleAlwaysShowInterestedCheckboxChange}>
-            Always show interested events
+            Show all events that are marked as "interested", regardless of filters
+          </CheckboxWithLabel>
+        </div>
+        <div>
+          <CheckboxWithLabel
+            checked={this.eventStore.hideNotInterested}
+            onChange={this.handleHideNotInterestedCheckboxChange}>
+            Hide events that are not marked as "interested"
           </CheckboxWithLabel>
         </div>
       </div>
@@ -179,6 +186,11 @@ class App extends Component {
 
   handleAlwaysShowInterestedCheckboxChange = (e) => {
     this.eventStore.alwaysShowInterested = e.target.checked;
+    this.setStateFromStore();
+  }
+
+  handleHideNotInterestedCheckboxChange = (e) => {
+    this.eventStore.hideNotInterested = e.target.checked;
     this.setStateFromStore();
   }
 

@@ -83,3 +83,17 @@ p { margin: 0 }
 .event.interested {
   font-weight: bold;
 }
+
+.checkbox {
+  margin: 2px 0;
+}
+
+.checkbox input {
+  float: left;
+  margin-top: 5px;
+}
+
+.checkbox label {
+  margin-left: 20px;
+  display: block;
+}
