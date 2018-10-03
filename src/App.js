@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Calendar from 'react-big-calendar';
 import moment from 'moment';
-import randomId from 'random-id';
+import shortId from 'shortid';
 import cx from 'classnames';
 import { desaturate, darken, transparentize } from 'polished';
 
@@ -10,15 +10,23 @@ import './App.css'
 
 import EventsStore from './EventsStore';
 
+const CheckboxWithLabel = ({id, children, ...props}) => {
+  if(!id) {
+    id = shortId();
+  }
+
+  return (
+    <span>
+      <input type='checkbox' id={id} {...props} />
+      <label htmlFor={id}>{children}</label>
+    </span>
+  )
+}
+
 class App extends Component {
   constructor() { super(); 
     this.eventStore = new EventsStore();
     this.state = this.createStateFromStore();
-
-    this.getEventProps = this.getEventProps.bind(this);
-    this.handleEventDoubleClick = this.handleEventDoubleClick.bind(this);
-    this.handleEventSelect = this.handleEventSelect.bind(this);
-    this.handleAlwaysShowInterestedCheckboxChange = this.handleAlwaysShowInterestedCheckboxChange.bind(this);
   }
 
   setStateFromStore() {
@@ -97,7 +105,6 @@ class App extends Component {
     }
 
     const event = this.state.selectedEvent;
-    const id = 'interested-' + randomId;
 
     return (
       <div className='container event-details'>
@@ -110,11 +117,11 @@ class App extends Component {
             {moment(event.end).format('h:mm a')}
           </div>
           <div className='interested'>
-            <input type='checkbox' id={id} 
+            <CheckboxWithLabel
               checked={this.state.interested[event.id]} 
-              onChange={e => this.handleInterestedCheckboxChange(e, event)}
-              />
-            <label htmlFor={id}>Interested</label>
+              onChange={e => this.handleInterestedCheckboxChange(e, event)}>
+              Interested
+            </CheckboxWithLabel>
           </div>
         </div>
         <div className='event-abstract'>
@@ -125,15 +132,16 @@ class App extends Component {
   }
 
   renderOptions() {
-    const id = 'always-interested-' + randomId();
-
     return (
       <div>
         <div className='title'><b>Options</b></div>
-        <input type='checkbox' id={id}
-          checked={this.eventStore.alwaysShowInterested}
-          onChange={this.handleAlwaysShowInterestedCheckboxChange} />
-        <label htmlFor={id}>Always show interested events</label>
+        <div>
+          <CheckboxWithLabel
+            checked={this.eventStore.alwaysShowInterested}
+            onChange={this.handleAlwaysShowInterestedCheckboxChange}>
+            Always show interested events
+          </CheckboxWithLabel>
+        </div>
       </div>
     )
   }
@@ -154,57 +162,54 @@ class App extends Component {
   }
 
   renderChoice(choice, title) {
-    const id = 'title-' + randomId(16);
-
     return (
       <div key={choice.value}>
-        <input type='checkbox' id={id}
-          checked={choice.isIncluded} 
-          onChange={e => this.handleFilterCheckboxChange(e, choice)} />
-        <label htmlFor={id}>
+        <CheckboxWithLabel 
+          checked={choice.isIncluded}
+          onChange={e => this.handleFilterCheckboxChange(e, choice)}>
           { this.state.colorBy === title
             ? <span className='color-label' style={{backgroundColor: choice.color}} />
             : null
           }
           {choice.value || <i>Unknown</i>}
-        </label>
+        </CheckboxWithLabel>
       </div>
     );
   }
 
-  handleAlwaysShowInterestedCheckboxChange(e) {
+  handleAlwaysShowInterestedCheckboxChange = (e) => {
     this.eventStore.alwaysShowInterested = e.target.checked;
     this.setStateFromStore();
   }
 
-  handleInterestedCheckboxChange(e, event) {
+  handleInterestedCheckboxChange = (e, event) => {
     this.eventStore.updateInterested(event, e.target.checked);
     this.setStateFromStore();
   }
 
-  handleFilterCheckboxChange(e, choice) {
+  handleFilterCheckboxChange = (e, choice) => {
     this.eventStore.updateIncluded(choice, e.target.checked);
     this.setStateFromStore();
   }
 
-  handleSelectAllOrNoneClick(e, choices) {
+  handleSelectAllOrNoneClick = (e, choices) => {
     for(const key of Object.keys(choices)) {
       this.eventStore.updateIncluded(choices[key], e.target.value === 'true');
     }
     this.setStateFromStore();
   }
 
-  handleEventSelect(event) {
+  handleEventSelect = (event) => {
     this.setState({selectedEvent: event});
   }
 
-  handleEventDoubleClick(event) {
+  handleEventDoubleClick = (event) => {
     this.eventStore.updateInterested(event, !this.state.interested[event.id]);
     this.setStateFromStore();
     return false;
   }
 
-  getEventProps(e, start, end, isSelected) {
+  getEventProps = (e, start, end, isSelected) => {
     let backgroundColor = desaturate(0.25, e.color);
     let borderColor = darken(0.2, backgroundColor);
     
