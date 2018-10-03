@@ -16,7 +16,7 @@ class App extends Component {
     this.state = this.createStateFromStore();
 
     this.getEventProps = this.getEventProps.bind(this);
-    this.eventDoubleClicked = this.eventDoubleClicked.bind(this);
+    this.handleEventDoubleClick = this.handleEventDoubleClick.bind(this);
   }
 
   setStateFromStore() {
@@ -66,7 +66,7 @@ class App extends Component {
         eventPropGetter={this.getEventProps}
         titleAccessor={e => e.abbreviation + ' - ' + e.title}
         tooltipAccessor={e => e.title + ': ' + e.abstract}
-        onDoubleClickEvent={this.eventDoubleClicked}
+        onDoubleClickEvent={this.handleEventDoubleClick}
         min={new Date(2018, 10, 25, 10, 0)}
         max={new Date(2018, 10, 25, 22, 0)}
         />
@@ -80,8 +80,8 @@ class App extends Component {
       <div>
         <div className='title'>
           <b>{title}</b>
-          <button onClick={() => this.updateAllIncluded(choices, false)}>NONE</button>
-          <button onClick={() => this.updateAllIncluded(choices, true)}>ALL</button>
+          <button onClick={e => this.handleSelectAllOrNoneClick(e, choices)} value={false}>NONE</button>
+          <button onClick={e => this.handleSelectAllOrNoneClick(e, choices)} value={true}>ALL</button>
         </div>
         {keys.map(key => this.renderChoice(choices[key], title))}
       </div>
@@ -107,24 +107,23 @@ class App extends Component {
     );
   }
 
-  updateIncluded(choice, isIncluded) {
-    this.eventStore.updateIncluded(choice, isIncluded);
+  handleCheckboxChange(e, choice) {
+    this.eventStore.updateIncluded(choice, e.target.checked);
     this.setStateFromStore();
   }
 
-  updateAllIncluded(choices, isIncluded) {
+  handleSelectAllOrNoneClick(e, choices) {
     for(const key of Object.keys(choices)) {
-      this.eventStore.updateIncluded(choices[key], isIncluded);
+      this.eventStore.updateIncluded(choices[key], e.target.value === 'true');
     }
     this.setStateFromStore();
   }
 
-  updateExcludeNotInterested(value) {
-    this.eventStore.updateExcludeNotInterested(value);
-    this.setStateFromStore();
+  handleEventSelect(event) {
+    this.setState({selectedEvent: event});
   }
 
-  eventDoubleClicked(event) {
+  handleEventDoubleClick(event) {
     this.eventStore.toggleInterested(event);
     this.setStateFromStore();
     return false;
