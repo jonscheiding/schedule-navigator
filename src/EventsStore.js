@@ -20,7 +20,7 @@ export default class EventsStore {
     this.types = this._createFilterMap(e => e.type, 'type');
     this.interested = this._createInterestedMap();
     this.colorBy = 'location';
-    this.alwaysShowInterested = true;
+    this.alwaysShowInterested = false;
     this.hideNotInterested = false;
   }
 
