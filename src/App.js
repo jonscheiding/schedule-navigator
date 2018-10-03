@@ -30,6 +30,7 @@ class App extends Component {
       events: this.eventStore.getFilteredList(),
       topics: this.eventStore.topics,
       locations: this.eventStore.locations,
+      types: this.eventStore.types,
       interested: this.eventStore.interested,
       colorBy: this.eventStore.colorBy,
       excludeNotInterested: this.eventStore.excludeNotInterested
@@ -43,6 +44,9 @@ class App extends Component {
           <div className='vertical container'>
             <div className='topics chooser scrollable'>
               {this.renderChooser(this.state.topics, 'topic')}
+            </div>
+            <div className='types chooser'>
+              {this.renderChooser(this.state.types, 'types')}
             </div>
             <div className='locations chooser'>
               {this.renderChooser(this.state.locations, 'location')}

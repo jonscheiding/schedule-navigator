@@ -15,6 +15,7 @@ export default class EventsStore {
 
     this.topics = this._createFilterMap(e => e.topic, 'topic');
     this.locations = this._createFilterMap(e => e.sessionLocation, 'location');
+    this.types = this._createFilterMap(e => e.type, 'type');
     this.interested = this._createInterestedMap();
     this.colorBy = 'location';
     this.alwaysShowInterested = true;
@@ -24,7 +25,11 @@ export default class EventsStore {
     return this.events
       .filter(e => 
         (this.interested[e.id] && this.alwaysShowInterested) ||
-        (this.topics[e.topic].isIncluded && this.locations[e.sessionLocation].isIncluded))
+        (
+          this.topics[e.topic].isIncluded && 
+          this.locations[e.sessionLocation].isIncluded &&
+          this.types[e.type].isIncluded
+        ))
       .map(e => ({
         ...e,
         color: this._getColor(e)
