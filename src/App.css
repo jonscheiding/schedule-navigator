@@ -14,9 +14,25 @@
 }
 
 .controls { flex: 0 0 350px; }
-.calendar { flex: 0 1 100%; }
+.events { flex: 0 1 100%; }
 .topics { flex: 0 1 75%; }
 .locations { flex: 0 1 25%; }
+
+.events .calendar { flex: 0 1 100%; }
+.events .current-event { flex: 0 1 250px; }
+
+.event-meta { flex: 0 1 30%; }
+.event-abstract { flex: 0 1 70%; }
+
+.event-details > div {
+  margin: 10px;
+}
+
+.event-details .interested {
+  margin-top: 1rem;
+}
+
+p { margin: 0 }
 
 .scrollable {
   overflow: auto;

@@ -39,8 +39,8 @@ export default class EventsStore {
     this.colorBy = 'topic';
   }
 
-  toggleInterested(event) {
-    this.interested[event.id] = !this.interested[event.id];
+  updateInterested(event, value) {
+    this.interested[event.id] = value;
     localStorage.setItem(`${event.id}/isInterested`, this.interested[event.id]);
   }
 

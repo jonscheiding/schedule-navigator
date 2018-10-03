@@ -17,6 +17,7 @@ class App extends Component {
 
     this.getEventProps = this.getEventProps.bind(this);
     this.handleEventDoubleClick = this.handleEventDoubleClick.bind(this);
+    this.handleEventSelect = this.handleEventSelect.bind(this);
   }
 
   setStateFromStore() {
@@ -47,8 +48,15 @@ class App extends Component {
             </div>
           </div>
         </div>
-        <div className='calendar scrollable'>
-          {this.renderCalendar()}
+        <div className='events'>
+          <div className='vertical container'>
+            <div className='calendar scrollable'>
+              {this.renderCalendar()}
+            </div>
+            <div className='current-event scrollable'>
+              {this.renderCurrentEvent()}
+            </div>
+          </div>
         </div>
       </div>
     );
@@ -64,13 +72,48 @@ class App extends Component {
         localizer={Calendar.momentLocalizer(moment)}
         style={{ height: "100%" }} 
         eventPropGetter={this.getEventProps}
-        titleAccessor={e => e.abbreviation + ' - ' + e.title}
-        tooltipAccessor={e => e.title + ': ' + e.abstract}
+        titleAccessor={e => e.abbreviation + ' ' + e.title}
+        tooltipAccessor={e => e.abbreviation + ' ' + e.title}
         onDoubleClickEvent={this.handleEventDoubleClick}
+        onSelectEvent={this.handleEventSelect}
+        selected={this.state.selectedEvent}
         min={new Date(2018, 10, 25, 10, 0)}
         max={new Date(2018, 10, 25, 22, 0)}
         />
     );
+  }
+
+  renderCurrentEvent() {
+    if(!this.state.selectedEvent) {
+      return null;
+    }
+
+    const event = this.state.selectedEvent;
+    const id = 'interested-' + randomId;
+
+    return (
+      <div className='container event-details'>
+        <div className='event-meta'>
+          <div><b>{event.abbreviation} {event.title}</b></div>
+          <div>{event.topic}</div>
+          <div><i>{event.type}</i></div>
+          <div>
+            {moment(event.start).format('h:mm a')} -
+            {moment(event.end).format('h:mm a')}
+          </div>
+          <div className='interested'>
+            <input type='checkbox' id={id} 
+              checked={this.state.interested[event.id]} 
+              onChange={e => this.handleInterestedCheckboxChange(e, event)}
+              />
+            <label htmlFor={id}>Interested</label>
+          </div>
+        </div>
+        <div className='event-abstract'>
+          <p>{event.abstract}</p>
+        </div>
+      </div>
+    )
   }
 
   renderChooser(choices, title) {
@@ -95,7 +138,7 @@ class App extends Component {
       <div key={choice.value}>
         <input type='checkbox' id={id}
           checked={choice.isIncluded} 
-          onChange={e => this.updateIncluded(choice, e.target.checked)} />
+          onChange={e => this.handleFilterCheckboxChange(e, choice)} />
         <label htmlFor={id}>
           { this.state.colorBy === title
             ? <span className='color-label' style={{backgroundColor: choice.color}} />
@@ -107,7 +150,12 @@ class App extends Component {
     );
   }
 
-  handleCheckboxChange(e, choice) {
+  handleInterestedCheckboxChange(e, event) {
+    this.eventStore.updateInterested(event, e.target.checked);
+    this.setStateFromStore();
+  }
+
+  handleFilterCheckboxChange(e, choice) {
     this.eventStore.updateIncluded(choice, e.target.checked);
     this.setStateFromStore();
   }
@@ -124,7 +172,7 @@ class App extends Component {
   }
 
   handleEventDoubleClick(event) {
-    this.eventStore.toggleInterested(event);
+    this.eventStore.updateInterested(event, !this.state.interested[event.id]);
     this.setStateFromStore();
     return false;
   }
