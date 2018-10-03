@@ -1,6 +1,7 @@
 import randomColor from 'randomcolor';
 
 import events from './events.json';
+import colors from './colors.json';
 
 for(const event of events) {
   event.start = new Date(Date.parse(event.start));
@@ -10,6 +11,7 @@ for(const event of events) {
 export default class EventsStore {
   constructor() {
     this.events = events;
+    this.colors = colors;
 
     this.topics = this._createFilterMap(e => e.topic, 'topic');
     this.locations = this._createFilterMap(e => e.sessionLocation, 'location');
@@ -65,10 +67,17 @@ export default class EventsStore {
     for(const value of uniqueValues) {
       const isIncluded = localStorage.getItem(`${type}/${value}/isIncluded`);
 
+      let color;
+      if(this.colors[type] && this.colors[type][value]) {
+        color = this.colors[type][value];
+      } else {
+        color = randomColor();
+      }
+
       map[value] = {
         value: value,
         type: type,
-        color: randomColor({luminosity: 'light'}),
+        color: color,
         isIncluded: isIncluded !== 'false'
       }
     }
