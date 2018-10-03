@@ -86,14 +86,23 @@ p { margin: 0 }
 
 .checkbox {
   margin: 2px 0;
+  display: inline-block;
 }
 
-.checkbox input {
+.checkbox.block {
+  display: block;
+}
+
+.checkbox.block input {
   float: left;
   margin-top: 5px;
 }
 
-.checkbox label {
+.checkbox.block label {
   margin-left: 20px;
   display: block;
+}
+
+.title-case {
+  text-transform: capitalize;
 }

@@ -8,16 +8,16 @@ import { desaturate, darken, transparentize } from 'polished';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 import './App.css'
 
-import EventsStore from './EventsStore';
+import EventsStore, { COLOR_BY_OPTIONS } from './EventsStore';
 
-const CheckboxWithLabel = ({id, children, ...props}) => {
+const InputWithLabel = ({id, children, inline, ...props}) => {
   if(!id) {
     id = shortId();
   }
 
   return (
-    <div className='checkbox'>
-      <input type='checkbox' id={id} {...props} />
+    <div className={cx('checkbox', { 'block' : !inline })}>
+      <input id={id} {...props} />
       <label htmlFor={id}>{children}</label>
     </div>
   )
@@ -54,7 +54,7 @@ class App extends Component {
               {this.renderChooser(this.state.topics, 'topic')}
             </div>
             <div className='types chooser'>
-              {this.renderChooser(this.state.types, 'types')}
+              {this.renderChooser(this.state.types, 'type')}
             </div>
             <div className='locations chooser'>
               {this.renderChooser(this.state.locations, 'location')}
@@ -117,11 +117,11 @@ class App extends Component {
             {moment(event.end).format('h:mm a')}
           </div>
           <div className='interested'>
-            <CheckboxWithLabel
+            <InputWithLabel type='checkbox'
               checked={this.state.interested[event.id]} 
               onChange={e => this.handleInterestedCheckboxChange(e, event)}>
               Interested
-            </CheckboxWithLabel>
+            </InputWithLabel>
           </div>
         </div>
         <div className='event-abstract'>
@@ -136,18 +136,30 @@ class App extends Component {
       <div>
         <div className='title'><b>Options</b></div>
         <div>
-          <CheckboxWithLabel
+          <InputWithLabel type='checkbox'
             checked={this.eventStore.alwaysShowInterested}
             onChange={this.handleAlwaysShowInterestedCheckboxChange}>
             Show all events that are marked as "interested", regardless of filters
-          </CheckboxWithLabel>
+          </InputWithLabel>
         </div>
         <div>
-          <CheckboxWithLabel
+          <InputWithLabel type='checkbox'
             checked={this.eventStore.hideNotInterested}
             onChange={this.handleHideNotInterestedCheckboxChange}>
             Hide events that are not marked as "interested"
-          </CheckboxWithLabel>
+          </InputWithLabel>
+        </div>
+        <div>
+          <div>Color By:</div>
+          {COLOR_BY_OPTIONS.map(option => (
+            <InputWithLabel type='radio' inline
+              radioGroup='color-by' value={option} key={option}
+              checked={this.eventStore.colorBy === option}
+              onChange={this.handleColorByRadioButtonChange}
+              >
+              <span className='title-case'>{option}</span>
+            </InputWithLabel>
+          ))}          
         </div>
       </div>
     )
@@ -171,7 +183,7 @@ class App extends Component {
   renderChoice(choice, title) {
     return (
       <div key={choice.value}>
-        <CheckboxWithLabel 
+        <InputWithLabel type='checkbox' 
           checked={choice.isIncluded}
           onChange={e => this.handleFilterCheckboxChange(e, choice)}>
           { this.state.colorBy === title
@@ -179,9 +191,14 @@ class App extends Component {
             : null
           }
           {choice.value || <i>Unknown</i>}
-        </CheckboxWithLabel>
+        </InputWithLabel>
       </div>
     );
+  }
+
+  handleColorByRadioButtonChange = (e) => {
+    this.eventStore.colorBy = e.target.value;
+    this.setStateFromStore();
   }
 
   handleAlwaysShowInterestedCheckboxChange = (e) => {

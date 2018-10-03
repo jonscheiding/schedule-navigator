@@ -8,6 +8,8 @@ for(const event of events) {
   event.end = new Date(Date.parse(event.end));
 }
 
+export const COLOR_BY_OPTIONS = [ 'location', 'topic', 'type' ];
+
 export default class EventsStore {
   constructor() {
     this.events = events;
@@ -63,6 +65,8 @@ export default class EventsStore {
         return this.locations[e.sessionLocation].color;
       case 'topic':
         return this.topics[e.topic].color;
+      case 'type':
+        return this.types[e.type].color;
       default: 
         return undefined;
     }
