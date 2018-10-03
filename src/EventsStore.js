@@ -16,7 +16,7 @@ export default class EventsStore {
     this.colors = colors;
 
     this.topics = this._createFilterMap(e => e.topic, 'topic');
-    this.locations = this._createFilterMap(e => e.sessionLocation, 'location');
+    this.locations = this._createFilterMap(e => e.location, 'location');
     this.types = this._createFilterMap(e => e.type, 'type');
     this.interested = this._createInterestedMap();
     this.colorBy = 'location';
@@ -30,7 +30,7 @@ export default class EventsStore {
         (this.interested[e.id] && this.alwaysShowInterested) ||
         (
           this.topics[e.topic].isIncluded && 
-          this.locations[e.sessionLocation].isIncluded &&
+          this.locations[e.location].isIncluded &&
           this.types[e.type].isIncluded &&
           (this.interested[e.id] || !this.hideNotInterested)
         ))
@@ -39,14 +39,6 @@ export default class EventsStore {
         color: this._getColor(e)
       }))
       ;
-  }
-
-  colorByLocation() {
-    this.colorBy = 'location';
-  }
-
-  colorByTopic() {
-    this.colorBy = 'topic';
   }
 
   updateInterested(event, value) {
@@ -62,7 +54,7 @@ export default class EventsStore {
   _getColor(e) {
     switch(this.colorBy) {
       case 'location':
-        return this.locations[e.sessionLocation].color;
+        return this.locations[e.location].color;
       case 'topic':
         return this.topics[e.topic].color;
       case 'type':
