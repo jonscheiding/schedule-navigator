@@ -10,6 +10,8 @@ import './App.css'
 
 import EventsStore, { COLOR_BY_OPTIONS } from './EventsStore';
 
+const PST_OFFSET = 8 * 60;
+
 const InputWithLabel = ({id, children, inline, ...props}) => {
   if(!id) {
     id = shortId();
@@ -79,22 +81,35 @@ class App extends Component {
   }
 
   renderCalendar() {
+    const accessors = {
+      startAccessor: e => this.convertTime(e.start),
+      endAccessor: e => this.convertTime(e.end),
+      titleAccessor: e => e.abbreviation + ' ' + e.title,
+      tooltipAccessor: e => e.abbreviation + ' ' + e.title
+    };
+
+    const handlers = {
+      onDoubleClickEvent: this.handleEventDoubleClick,
+      onSelectEvent: this.handleEventSelect
+    };
+
+    const settings = {
+      min: new Date(2018, 10, 25, 8, 30),
+      max: new Date(2018, 10, 25, 21, 30),
+      defaultDate: new Date(2018, 10, 26),
+      defaultView: 'day',
+      views: ['day', 'week', 'agenda'],
+      localizer: Calendar.momentLocalizer(moment)
+    };
+
     return (
       <Calendar
-        defaultDate={new Date(2018, 10, 26)}
-        defaultView="day"
-        views={['day', 'week', 'agenda']}
         events={this.state.events}
-        localizer={Calendar.momentLocalizer(moment)}
-        style={{ height: "100%" }} 
         eventPropGetter={this.getEventProps}
-        titleAccessor={e => e.abbreviation + ' ' + e.title}
-        tooltipAccessor={e => e.abbreviation + ' ' + e.title}
-        onDoubleClickEvent={this.handleEventDoubleClick}
-        onSelectEvent={this.handleEventSelect}
         selected={this.state.selectedEvent}
-        min={new Date(2018, 10, 25, 10, 0)}
-        max={new Date(2018, 10, 25, 22, 0)}
+        {...settings}
+        {...handlers}
+        {...accessors}
         />
     );
   }
@@ -236,6 +251,14 @@ class App extends Component {
     this.eventStore.updateInterested(event, !this.state.interested[event.id]);
     this.setStateFromStore();
     return false;
+  }
+
+  convertTime = (date) => {
+    if(!(date instanceof Date)) { return date; }
+    
+    const adjustment = PST_OFFSET - date.getTimezoneOffset();
+
+    return moment(date).subtract({minutes: adjustment}).toDate();
   }
 
   getEventProps = (e, start, end, isSelected) => {
