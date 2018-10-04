@@ -10,6 +10,7 @@
     "randomcolor": "^0.5.3",
     "react": "^16.5.2",
     "react-big-calendar": "^0.20.1",
+    "react-debounce-input": "^3.2.0",
     "react-dom": "^16.5.2",
     "react-hot-loader": "^4.3.11",
     "react-scripts": "2.0.3",

@@ -1,3 +1,12 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+input[type='text'] {
+  width: 100%;
+  font-size: 1.2rem;
+}
+
 .container {
   display: flex;
   flex-direction: row;
@@ -39,11 +48,11 @@ p { margin: 0 }
   overflow: auto;
 }
 
-.chooser {
+.filter {
   padding: 0.5rem;
 }
 
-.chooser .color-label {
+.filter .color-label {
   width: 1.2rem;
   height: 1.2rem;
   display: inline-block;
@@ -53,16 +62,16 @@ p { margin: 0 }
   border-radius: 0.2rem;
 }
 
-.chooser .title {
+.filter .title {
   margin-bottom: 0.5rem;
 }
 
-.chooser .title b {
+.filter .title b {
   font-size: 1.4rem;
   text-transform: uppercase;
 }
 
-.chooser .title button {
+.filter .title button {
   float: right;
   margin: 0.5rem 0.5rem 0.5rem 0;
   border: none;

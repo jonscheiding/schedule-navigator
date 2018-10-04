@@ -20,6 +20,7 @@ export default class EventsStore {
     this.types = this._createFilterMap(e => e.type, 'type');
     this.interested = this._createInterestedMap();
     this.colorBy = 'location';
+    this.searchText = null;
     this.alwaysShowInterested = false;
     this.hideNotInterested = false;
   }
@@ -32,7 +33,8 @@ export default class EventsStore {
           this.topics[e.topic].isIncluded && 
           this.locations[e.location].isIncluded &&
           this.types[e.type].isIncluded &&
-          (this.interested[e.id] || !this.hideNotInterested)
+          (this.interested[e.id] || !this.hideNotInterested) &&
+          (this._matchesSearchText(e))
         ))
       .map(e => ({
         ...e,
@@ -49,6 +51,24 @@ export default class EventsStore {
   updateIncluded(choice, isIncluded) {
     choice.isIncluded = isIncluded;
     localStorage.setItem(`${choice.type}/${choice.value}/isIncluded`, isIncluded);
+  }
+
+  _matchesSearchText(e) {
+    if(this.searchText === null || this.searchText === '') {
+      return true;
+    }
+
+    const searchText = this.searchText.toLowerCase();
+    for(const field of [e.title, e.abbreviation]) {
+      if(!field) { continue; }
+      if(field.toLowerCase().indexOf(searchText) === -1) {
+        continue;
+      }
+
+      return true;
+    }
+
+    return false;
   }
 
   _getColor(e) {

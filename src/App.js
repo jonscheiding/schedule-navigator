@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { DebounceInput } from 'react-debounce-input';
 import Calendar from 'react-big-calendar';
 import moment from 'moment';
 import shortId from 'shortid';
@@ -52,16 +53,19 @@ class App extends Component {
       <div className='main container'>
         <div className='controls'>
           <div className='vertical container'>
-            <div className='topics chooser scrollable'>
+            <div className='topics filter scrollable'>
               {this.renderChooser(this.state.topics, 'topic')}
             </div>
-            <div className='types chooser'>
+            <div className='types filter'>
               {this.renderChooser(this.state.types, 'type')}
             </div>
-            <div className='locations chooser'>
+            <div className='locations filter'>
               {this.renderChooser(this.state.locations, 'location')}
             </div>
-            <div className='options chooser'>
+            <div className='search filter'>
+              {this.renderSearch()}
+            </div>
+            <div className='options filter'>
               {this.renderOptions()}
             </div>
           </div>
@@ -182,6 +186,19 @@ class App extends Component {
     )
   }
 
+  renderSearch() {
+    return (
+      <div>
+        <div className='title'>
+          <b>Search</b>
+        </div>
+        <DebounceInput debounceTimeout={250}
+          value={this.eventStore.searchText}
+          onChange={this.handleSearchTextChange} />
+      </div>
+    );
+  }
+
   renderChooser(choices, title) {
     const keys = Object.keys(choices).sort();
 
@@ -211,6 +228,11 @@ class App extends Component {
         </InputWithLabel>
       </div>
     );
+  }
+
+  handleSearchTextChange = (e) => {
+    this.eventStore.searchText = e.target.value;
+    this.setStateFromStore();
   }
 
   handleColorByRadioButtonChange = (e) => {
