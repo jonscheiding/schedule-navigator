@@ -90,7 +90,8 @@ p { margin: 0 }
 }
 
 .event.interested {
-  font-weight: bold;
+  border-right-width: 10px;
+  border-right-style: solid;
 }
 
 .checkbox {

@@ -108,11 +108,18 @@ class App extends Component {
       localizer: Calendar.momentLocalizer(moment)
     };
 
+    const components = {
+      agenda: {
+        event: (e) => this.renderEventDetails(e.event, true)
+      }
+    }
+
     return (
       <Calendar
         events={this.state.events}
         eventPropGetter={this.getEventProps}
         selected={this.state.selectedEvent}
+        components={components}
         {...settings}
         {...handlers}
         {...accessors}
@@ -125,18 +132,22 @@ class App extends Component {
       return null;
     }
 
-    const event = this.state.selectedEvent;
+    return this.renderEventDetails(this.state.selectedEvent);
+  }
 
+  renderEventDetails(event, hideTimes = false) {
     return (
       <div className='container event-details'>
         <div className='event-meta'>
           <div><b>{event.abbreviation} {event.title}</b></div>
           <div>{event.topic}</div>
           <div><i>{event.type}</i></div>
-          <div>
-            {moment(this.convertToEventLocalTime(event.start)).format('h:mm a')} -
-            {moment(this.convertToEventLocalTime(event.end)).format('h:mm a')}
-          </div>
+          { hideTimes ? null : 
+            <div>
+              {moment(this.convertToEventLocalTime(event.start)).format('h:mm a')} -
+              {moment(this.convertToEventLocalTime(event.end)).format('h:mm a')}
+            </div>
+          }
           <div className='interested'>
             <InputWithLabel type='checkbox'
               checked={this.state.interested[event.id]} 
@@ -290,7 +301,7 @@ class App extends Component {
     let borderColor = darken(0.2, backgroundColor);
     
     if(!isSelected) {
-      backgroundColor = transparentize(0.1, backgroundColor);
+      backgroundColor = transparentize(0.2, backgroundColor);
     }
 
     return {
