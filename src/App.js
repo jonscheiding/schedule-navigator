@@ -203,7 +203,7 @@ class App extends Component {
         <div className='title'>
           <b>Search</b>
         </div>
-        <DebounceInput debounceTimeout={250}
+        <DebounceInput debounceTimeout={500}
           value={this.eventStore.searchText}
           onChange={this.handleSearchTextChange} />
       </div>
