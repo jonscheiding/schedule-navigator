@@ -1,6 +1,20 @@
 *, *:before, *:after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  line-height: 1;
+  text-decoration: none;
 }
+
+button {
+  border: none;
+  background: none;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+button:focus { outline: none; }
 
 input[type='text'] {
   width: 100%;
@@ -14,43 +28,59 @@ input[type='text'] {
   height: 100%;
 }
 
-.container.main {
-  height: 100vh;
+.container.vertical { flex-direction: column; }
+.scrollable { overflow: auto; }
+
+.collapsible { padding: 0 0.5rem; }
+
+.collapsible .header { 
+  margin: 0.5rem 0;
 }
 
-.container.vertical {
-  flex-direction: column;
+.collapsible .header .title {
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  display: inline-block;
 }
 
-.controls { flex: 0 0 350px; }
-.events { flex: 0 1 100%; }
-.topics { flex: 0 1 100%; }
-.locations { flex: 0 1 auto; }
-.options { flex: 0 1 auto; }
-
-.events .calendar { flex: 0 1 100%; }
-.events .current-event { flex: 0 1 250px; }
-
-.event-meta { flex: 0 1 30%; }
-.event-abstract { flex: 0 1 70%; }
-
-.event-details > div {
-  margin: 10px;
+.collapsible .header .indicator {
+  width: 1.2rem;
+  height: 1.2rem;
+  display: inline-block;
 }
 
-.event-details .interested {
-  margin-top: 1rem;
+.collapsible .header .indicator.collapsible {
+  background: url('icons/expand_less.svg');
 }
 
-p { margin: 0 }
-
-.scrollable {
-  overflow: auto;
+.collapsible .header .indicator.collapsible.collapsed {
+  background: url('icons/expand_more.svg');
 }
 
-.filter {
-  padding: 0.5rem;
+.collapsible .header .buttons {
+  float: right;
+  margin-top: 3px;
 }
+
+.collapsible .header .buttons button {
+  margin-left: 6px;
+}
+
+.container.main { height: 100vh; }
+.container.main > .controls { flex: 0 0 300px; }
+.container.main > .events { flex: 0 1 100%; }
+
+.container.controls > .topics { flex: 0 1 100%; }
+
+.container.events > .calendar { flex: 0 1 100%; }
+.container.events > .current-event { flex: 0 1 250px; }
+
+.container.event-details > .meta { flex: 0 1 30%; }
+.container.event-details > .abstract { flex: 0 1 70%; }
+
+.event-details > div { margin: 10px; }
+.event-details .interested { margin-top: 1rem; }
 
 .filter .color-label {
   width: 1.2rem;
@@ -62,27 +92,7 @@ p { margin: 0 }
   border-radius: 0.2rem;
 }
 
-.filter .title {
-  margin-bottom: 0.5rem;
-}
-
-.filter .title b {
-  font-size: 1.4rem;
-  text-transform: uppercase;
-}
-
-.filter .title button {
-  float: right;
-  margin: 0.5rem 0.5rem 0.5rem 0;
-  border: none;
-  background: none;
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-.event {
-  color: black;
-}
+.event { color: black; }
 
 .event.selected {
   z-index: 2;
@@ -94,25 +104,11 @@ p { margin: 0 }
   border-right-style: solid;
 }
 
-.checkbox {
-  margin: 2px 0;
-  display: inline-block;
-}
+.checkbox { margin: 4px 0; }
+.checkbox.inline { display: inline-block; }
+.checkbox label { margin: 0 5px; }
+.title-case { text-transform: capitalize; }
+.option { margin: 5px 0; }
 
-.checkbox.block {
-  display: block;
-}
-
-.checkbox.block input {
-  float: left;
-  margin-top: 5px;
-}
-
-.checkbox.block label {
-  margin-left: 20px;
-  display: block;
-}
-
-.title-case {
-  text-transform: capitalize;
-}
+.checkbox.float input { margin-top: 2px; float: left; }
+.checkbox.float label { display: block; margin-left: 20px; }

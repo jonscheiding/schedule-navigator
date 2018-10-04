@@ -13,18 +13,45 @@ import EventsStore, { COLOR_BY_OPTIONS } from './EventsStore';
 
 const PST_OFFSET = 8 * 60;
 
-const InputWithLabel = ({id, children, inline, ...props}) => {
+const InputWithLabel = ({id, children, inline, float, ...props}) => {
   if(!id) {
     id = shortId();
   }
 
   return (
-    <div className={cx('checkbox', { 'block' : !inline })}>
+    <div className={cx('checkbox', { 'inline': inline, 'float': float })}>
       <input id={id} {...props} />
       <label htmlFor={id}>{children}</label>
     </div>
   )
 }
+
+class Collapsible extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { collapsed: props.defaultCollapsed === true };
+  }
+
+  render() {
+    const { collapsible, title, buttons, children, className, ...props } = this.props;
+    const { collapsed } = this.state;
+
+    return (
+      <div className={cx(className, 'collapsible')} {...props}>
+        <div className='header'>
+          <button onClick={() => this.setState({collapsed: !collapsed})}>
+            <div className='title'>{title}</div>
+            <div className={cx('indicator', { collapsed, collapsible })} />
+          </button>
+          <div className='buttons'>{buttons}</div>
+        </div>
+        {collapsed && collapsible ? null : <div>{children}</div>}
+      </div>
+    );
+  }
+}
+
+Collapsible.defaultProps = { collapsible: true };
 
 class App extends Component {
   constructor() { super(); 
@@ -51,33 +78,29 @@ class App extends Component {
   render() {
     return (
       <div className='main container'>
-        <div className='controls'>
-          <div className='vertical container'>
-            <div className='topics filter scrollable'>
-              {this.renderChooser(this.state.topics, 'topic')}
-            </div>
-            <div className='types filter'>
-              {this.renderChooser(this.state.types, 'type')}
-            </div>
-            <div className='locations filter'>
-              {this.renderChooser(this.state.locations, 'location')}
-            </div>
-            <div className='search filter'>
-              {this.renderSearch()}
-            </div>
-            <div className='options filter'>
-              {this.renderOptions()}
-            </div>
+        <div className='controls vertical container'>
+          <div className='topics scrollable'>
+            {this.renderChooser(this.state.topics, 'topic')}
+          </div>
+          <div className='types'>
+            {this.renderChooser(this.state.types, 'type')}
+          </div>
+          <div className='locations'>
+            {this.renderChooser(this.state.locations, 'location')}
+          </div>
+          <div className='search'>
+            {this.renderSearch()}
+          </div>
+          <div className='options'>
+            {this.renderOptions()}
           </div>
         </div>
-        <div className='events'>
-          <div className='vertical container'>
-            <div className='calendar scrollable'>
-              {this.renderCalendar()}
-            </div>
-            <div className='current-event scrollable'>
-              {this.renderCurrentEvent()}
-            </div>
+        <div className='events vertical container'>
+          <div className='calendar scrollable'>
+            {this.renderCalendar()}
+          </div>
+          <div className='current-event scrollable'>
+            {this.renderCurrentEvent()}
           </div>
         </div>
       </div>
@@ -138,7 +161,7 @@ class App extends Component {
   renderEventDetails(event, hideTimes = false) {
     return (
       <div className='container event-details'>
-        <div className='event-meta'>
+        <div className='meta'>
           <div><b>{event.abbreviation} {event.title}</b></div>
           <div>{event.topic}</div>
           <div><i>{event.type}</i></div>
@@ -156,7 +179,7 @@ class App extends Component {
             </InputWithLabel>
           </div>
         </div>
-        <div className='event-abstract'>
+        <div className='abstract'>
           <p>{event.abstract}</p>
         </div>
       </div>
@@ -165,23 +188,22 @@ class App extends Component {
 
   renderOptions() {
     return (
-      <div>
-        <div className='title'><b>Options</b></div>
-        <div>
-          <InputWithLabel type='checkbox'
+      <Collapsible title='Options' defaultCollapsed={true}>
+        <div className='option'>
+          <InputWithLabel type='checkbox' float
             checked={this.eventStore.alwaysShowInterested}
             onChange={this.handleAlwaysShowInterestedCheckboxChange}>
             Show all events that are marked as "interested", regardless of filters
           </InputWithLabel>
         </div>
-        <div>
-          <InputWithLabel type='checkbox'
+        <div className='option'>
+          <InputWithLabel type='checkbox' float
             checked={this.eventStore.hideNotInterested}
             onChange={this.handleHideNotInterestedCheckboxChange}>
             Hide events that are not marked as "interested"
           </InputWithLabel>
         </div>
-        <div>
+        <div className='option'>
           <div>Color By:</div>
           {COLOR_BY_OPTIONS.map(option => (
             <InputWithLabel type='radio' inline
@@ -193,35 +215,34 @@ class App extends Component {
             </InputWithLabel>
           ))}          
         </div>
-      </div>
+      </Collapsible>
     )
   }
 
   renderSearch() {
     return (
-      <div>
-        <div className='title'>
-          <b>Search</b>
-        </div>
+      <Collapsible title='Search' defaultCollapsed={true}>
         <DebounceInput debounceTimeout={500}
           value={this.eventStore.searchText}
           onChange={this.handleSearchTextChange} />
-      </div>
+      </Collapsible>
     );
   }
 
   renderChooser(choices, title) {
     const keys = Object.keys(choices).sort();
+    
+    const buttons = (
+      <div>
+        <button onClick={e => this.handleSelectAllOrNoneClick(e, choices)} value={true}>ALL</button>
+        <button onClick={e => this.handleSelectAllOrNoneClick(e, choices)} value={false}>NONE</button>
+      </div>
+    );
 
     return (
-      <div>
-        <div className='title'>
-          <b>{title}</b>
-          <button onClick={e => this.handleSelectAllOrNoneClick(e, choices)} value={false}>NONE</button>
-          <button onClick={e => this.handleSelectAllOrNoneClick(e, choices)} value={true}>ALL</button>
-        </div>
+      <Collapsible title={title} buttons={buttons} collapsible={title !== 'topic'}>
         {keys.map(key => this.renderChoice(choices[key], title))}
-      </div>
+      </Collapsible>
     );
   }
 
