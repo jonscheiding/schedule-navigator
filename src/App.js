@@ -14,13 +14,13 @@ import EventsStore, { COLOR_BY_OPTIONS } from './EventsStore';
 const PST_OFFSET = 8 * 60;
 const DEFAULT_DATE = new Date(2018, 10, 26);
 
-const InputWithLabel = ({id, children, inline, float, ...props}) => {
+const InputWithLabel = ({id, children, inline, float, title, ...props}) => {
   if(!id) {
     id = shortId();
   }
 
   return (
-    <div className={cx('checkbox', { 'inline': inline, 'float': float })}>
+    <div title={title} className={cx('checkbox', { 'inline': inline, 'float': float })}>
       <input id={id} {...props} />
       <label htmlFor={id}>{children}</label>
     </div>
@@ -66,7 +66,13 @@ class App extends Component {
   }
 
   setStateFromStore() {
-    this.setState(this.createStateFromStore());
+    const state = this.createStateFromStore();
+    let { selectedEvent } = this.state;
+    if(selectedEvent) {
+      selectedEvent = state.events.find(e => e.id === selectedEvent.id);
+    }
+
+    this.setState({ ...state, selectedEvent });
   }
 
   createStateFromStore() {
@@ -83,7 +89,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className='main container'>
+      <div className='main container' onKeyPress={this.handleKeyPress} tabIndex={0}>
         <div className='controls vertical container'>
           <div className='topics scrollable'>
             {this.renderChooser(this.state.topics, 'topic')}
@@ -185,7 +191,7 @@ class App extends Component {
             </div>
           }
           <div className='interested'>
-            <InputWithLabel type='checkbox'
+            <InputWithLabel type='checkbox' title='Toggle Interested (\)'
               checked={this.state.interested[event.id]} 
               onChange={e => this.handleInterestedCheckboxChange(e, event)}>
               Interested
@@ -202,8 +208,8 @@ class App extends Component {
   renderEventNavigation() {
     return (
       <div className="navigation">
-        <button onClick={() => this.handleEventNavigation(-1)}>Previous Event</button>
-        <button onClick={() => this.handleEventNavigation(1)}>Next Event</button>
+        <button onClick={() => this.handleEventNavigation(-1)} title="Previous event ([)">Previous Event</button>
+        <button onClick={() => this.handleEventNavigation(1)} title="Next Event (])">Next Event</button>
       </div>
     )
   }
@@ -344,6 +350,11 @@ class App extends Component {
       .filter(e => e.start >= visibleRange.start && e.end <= visibleRange.end)
       .sort((a, b) => a.start - b.start);
 
+    if(!selectedEvent) {
+      this.setState({selectedEvent: visibleEvents[0]});
+      return;
+    }
+
     const currentIndex = visibleEvents.indexOf(selectedEvent);
     let newIndex = currentIndex + increment;
 
@@ -356,6 +367,24 @@ class App extends Component {
     this.setState({
       selectedEvent: visibleEvents[newIndex]
     });
+  }
+
+  handleKeyPress = (e) => {
+    switch(e.key) {
+      case '\\':
+        if(!this.state.selectedEvent) { return false; }
+
+        this.handleEventDoubleClick(this.state.selectedEvent);
+        return false;
+      case ']':
+        this.handleEventNavigation(1);
+        return false;
+      case '[':
+        this.handleEventNavigation(-1);
+        return false;
+      default:
+        return true;
+    }
   }
 
   convertToEventLocalTime = (date) => {
