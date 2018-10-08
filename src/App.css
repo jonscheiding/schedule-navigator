@@ -82,7 +82,7 @@ input[type='text'] {
 .event-details > div { margin: 10px; }
 .event-details .interested { margin-top: 1rem; }
 
-.filter .color-label {
+.color-label {
   width: 1.2rem;
   height: 1.2rem;
   display: inline-block;
