@@ -1,0 +1,12 @@
+patch-package
+--- a/node_modules/react-big-calendar/lib/Calendar.js
++++ b/node_modules/react-big-calendar/lib/Calendar.js
+@@ -140,7 +140,7 @@ function (_React$Component) {
+ 
+       if (onRangeChange) {
+         if (view.range) {
+-          onRangeChange(view.range(date, {}));
++          onRangeChange(view.range(date, this.props));
+         } else {
+           process.env.NODE_ENV !== "production" ? (0, _warning.default)(true, 'onRangeChange prop not supported for this view') : void 0;
+         }

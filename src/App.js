@@ -12,6 +12,7 @@ import './App.css'
 import EventsStore, { COLOR_BY_OPTIONS } from './EventsStore';
 
 const PST_OFFSET = 8 * 60;
+const DEFAULT_DATE = new Date(2018, 10, 26);
 
 const InputWithLabel = ({id, children, inline, float, ...props}) => {
   if(!id) {
@@ -33,7 +34,7 @@ class Collapsible extends Component {
   }
 
   render() {
-    const { collapsible, title, buttons, children, className, ...props } = this.props;
+    const { collapsible, title, buttons, children, className, defaultCollapsed, ...props } = this.props;
     const { collapsed } = this.state;
 
     return (
@@ -56,7 +57,12 @@ Collapsible.defaultProps = { collapsible: true };
 class App extends Component {
   constructor() { super(); 
     this.eventStore = new EventsStore();
-    this.state = this.createStateFromStore();
+    this.state = {
+      ...this.createStateFromStore(),
+      visibleRange: this.calculateDateRange([DEFAULT_DATE])
+    };
+
+    this.calendarRef = React.createRef();
   }
 
   setStateFromStore() {
@@ -117,7 +123,8 @@ class App extends Component {
 
     const handlers = {
       onDoubleClickEvent: this.handleEventDoubleClick,
-      onSelectEvent: this.handleEventSelect
+      onSelectEvent: this.handleEventSelect,
+      onRangeChange: this.handleRangeChange
     };
 
     const settings = {
@@ -125,7 +132,7 @@ class App extends Component {
       max: new Date(2018, 10, 25, 21, 59, 59),
       step: 30,
       timeslots: 1,
-      defaultDate: new Date(2018, 10, 26),
+      defaultDate: DEFAULT_DATE,
       defaultView: 'day',
       views: ['day', 'week', 'agenda'],
       localizer: Calendar.momentLocalizer(moment)
@@ -139,6 +146,7 @@ class App extends Component {
 
     return (
       <Calendar
+        ref={this.calendarRef}
         events={this.state.events}
         eventPropGetter={this.getEventProps}
         selected={this.state.selectedEvent}
@@ -151,14 +159,19 @@ class App extends Component {
   }
 
   renderCurrentEvent() {
-    if(!this.state.selectedEvent) {
-      return null;
-    }
-
-    return this.renderEventDetails(this.state.selectedEvent);
+    return (
+      <div>
+        {this.renderEventDetails(this.state.selectedEvent)}
+        {this.renderEventNavigation()}
+      </div>
+    );
   }
 
   renderEventDetails(event, hideTimes = false) {
+    if(!event) { 
+      return null;
+    }
+
     return (
       <div className='container event-details'>
         <div className='meta'>
@@ -182,6 +195,15 @@ class App extends Component {
         <div className='abstract'>
           <p>{event.abstract}</p>
         </div>
+      </div>
+    )
+  }
+
+  renderEventNavigation() {
+    return (
+      <div className="navigation">
+        <button onClick={() => this.handleEventNavigation(-1)}>Previous Event</button>
+        <button onClick={() => this.handleEventNavigation(1)}>Next Event</button>
       </div>
     )
   }
@@ -309,6 +331,33 @@ class App extends Component {
     return false;
   }
 
+  handleRangeChange = (dates) => {
+    this.setState({ 
+      visibleRange: this.calculateDateRange(dates)
+    });
+  }
+
+  handleEventNavigation = (increment) => {
+    const { selectedEvent, visibleRange } = this.state;
+
+    const visibleEvents = this.state.events
+      .filter(e => e.start >= visibleRange.start && e.end <= visibleRange.end)
+      .sort((a, b) => a.start - b.start);
+
+    const currentIndex = visibleEvents.indexOf(selectedEvent);
+    let newIndex = currentIndex + increment;
+
+    if(newIndex >= visibleEvents.length) {
+      newIndex = 0;
+    } else if (newIndex < 0) {
+      newIndex = visibleEvents.length - 1;
+    }
+
+    this.setState({
+      selectedEvent: visibleEvents[newIndex]
+    });
+  }
+
   convertToEventLocalTime = (date) => {
     if(!(date instanceof Date)) { return date; }
     
@@ -316,6 +365,13 @@ class App extends Component {
 
     return moment(date).subtract({minutes: adjustment}).toDate();
   }
+
+  calculateDateRange(dates) {
+    const start = dates[0];
+    const end = moment(dates[dates.length - 1]).add({days: 1}).toDate();
+
+    return {start, end};
+  } 
 
   getEventProps = (e, start, end, isSelected) => {
     let backgroundColor = desaturate(0.25, e.color);
