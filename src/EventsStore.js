@@ -6,13 +6,6 @@ import colors from './colors.json';
 for(const event of events) {
   event.start = new Date(Date.parse(event.start));
   event.end = new Date(Date.parse(event.end));
-
-  switch(event.location) {
-    case 'Aria East':
-    case 'Aria West':
-      event.location = 'Aria';
-      break;
-  }
 }
 
 export const COLOR_BY_OPTIONS = [ 'location', 'topic', 'type' ];
