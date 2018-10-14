@@ -3,22 +3,26 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@babel/core": "^7.1.2",
     "classnames": "^2.2.6",
     "moment": "^2.22.2",
+    "patch-package": "^5.1.1",
     "polished": "^2.2.0",
-    "random-id": "^1.0.3",
     "randomcolor": "^0.5.3",
     "react": "^16.5.2",
     "react-big-calendar": "^0.20.1",
+    "react-debounce-input": "^3.2.0",
     "react-dom": "^16.5.2",
     "react-hot-loader": "^4.3.11",
-    "react-scripts": "2.0.3"
+    "react-scripts": "2.0.3",
+    "shortid": "^2.2.13"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "prepare": "patch-package"
   },
   "eslintConfig": {
     "extends": "react-app"
