@@ -10,52 +10,26 @@ function parseDateIntoEventLocalTime(dateString) {
 
 function cleanupEvents(events) {
   for(const event of events) {
-    event.start = parseDateIntoEventLocalTime(event.start);
-    event.end = parseDateIntoEventLocalTime(event.end);
+    cleanupDates(event);
   }
 }
 
-function getTimeComparisonValue(date) {
-  return parseInt(moment(date).format("HHmmss"));
+function cleanupRange(range) {
+  cleanupDates(range);
+  range.end = moment(range.end).subtract({seconds: 1}).toDate();
 }
 
-function compareTimes(a, b) {
-  return getTimeComparisonValue(a) - getTimeComparisonValue(b);
-}
-
-function compareDates(a, b) {
-  return a - b;
-}
-
-function adjustDateToDay(date, dayDate) {
-  return moment(date)
-    .dayOfYear(moment(dayDate).dayOfYear())
-    .toDate();
-}
-
-function determineCalendarRange(events) {
-  const allDates = 
-    events.map(e => e.start)
-    .concat(events.map(e => e.end));
-
-  const datesByTimeOfDay = allDates.slice(0).sort(compareTimes);
-  const datesByDate = allDates.slice(0).sort(compareDates);
-
-  const start = adjustDateToDay(datesByTimeOfDay[0], datesByDate[0]);
-  const end = adjustDateToDay(
-    datesByTimeOfDay[datesByTimeOfDay.length - 1],
-    datesByDate[datesByDate.length - 1]);
-
-  return { start, end };
+function cleanupDates(dates) {
+  dates.start = parseDateIntoEventLocalTime(dates.start);
+  dates.end = parseDateIntoEventLocalTime(dates.end);
 }
 
 export default function() {
   const events = require('../data/events.json');
-  cleanupEvents(events);
+  const range = require('../data/range.json');
 
-  const calendarSettings = {
-    range: determineCalendarRange(events)
-  };
-  
-  return { events, calendarSettings };
+  cleanupEvents(events);
+  cleanupRange(range);
+
+  return { events, range };
 }
