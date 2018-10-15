@@ -12,6 +12,7 @@ const filtersMatch = (filters, event) => {
 export const getEvents = state => state.events;
 export const getRange = state => state.range;
 export const getFilters = state => state.filters;
+export const getDefaults = state => state.defaults;
 
 const createFilterSelectors = (filterKeys) => {
   return filterKeys.toObject(

@@ -1,5 +1,16 @@
 import { combineReducers } from 'redux';
-import { CHANGE_FILTER, CHANGE_ALL_FILTERS } from './actions';
+import { CHANGE_FILTER, CHANGE_ALL_FILTERS, CHANGE_DATE, CHANGE_VIEW } from './actions';
+
+const defaultsReducer = (state = {}, action) => {
+  switch(action.type) {
+    case CHANGE_DATE:
+      return { ...state, date: action.date };
+    case CHANGE_VIEW:
+      return { ...state, view: action.view };
+    default:
+      return state;
+  }
+};
 
 const filterReducer = (filterKey) => (state = {}, action) => {
   switch(action.type) {
@@ -33,5 +44,6 @@ const filtersReducer = combineReducers({
 export default combineReducers({
   events: (state = []) => state,
   range: (state = {}) => state,
+  defaults: defaultsReducer,
   filters: filtersReducer
 });

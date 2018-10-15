@@ -7,7 +7,7 @@ import 'react-big-calendar/lib/css/react-big-calendar.css';
 
 class EventCalendar extends Component {
   render() {
-    const { events, range, className, style } = this.props;
+    const { events, range, defaults, className, style } = this.props;
 
     const localizer = Calendar.momentLocalizer(moment);
     return (
@@ -15,11 +15,20 @@ class EventCalendar extends Component {
         <Calendar 
           localizer={localizer}
           events={events} 
-          min={range.start} max={range.end} defaultDate={range.start}
-          views={['week', 'day', 'agenda']} defaultView='week'
+          min={range.start} max={range.end} defaultDate={defaults.date}
+          views={['week', 'day', 'agenda']} defaultView={defaults.view}
+          onNavigate={this.handleNavigate} onView={this.handleView}
           />
       </div>
     );
+  }
+
+  handleNavigate = (e) => {
+    this.props.onChangeDate(e);
+  }
+
+  handleView = (e) => {
+    this.props.onChangeView(e);
   }
 }
 
@@ -29,12 +38,20 @@ EventCalendar.propTypes = {
     start: PropTypes.instanceOf(Date).isRequired,
     end: PropTypes.instanceOf(Date).isRequired
   }).isRequired,
+  defaults: PropTypes.shape({
+    date: PropTypes.instanceOf(Date).isRequired,
+    view: PropTypes.string.isRequired
+  }),
   className: PropTypes.string,
-  style: PropTypes.string
+  style: PropTypes.string,
+  onChangeDate: PropTypes.func,
+  onChangeView: PropTypes.func
 };
 
 EventCalendar.defaultProps = {
-  events: []
+  events: [],
+  onChangeDate: () => {},
+  onChangeView: () => {}
 };
 
 export default EventCalendar;

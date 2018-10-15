@@ -44,6 +44,11 @@ export default function() {
   cleanupRange(range);
 
   const filters = buildFilters(events, ['location', 'type', 'topic']);
+  
+  const defaults = {
+    view: 'day',
+    date: range.start
+  };
 
-  return { events, range, filters };
+  return { events, range, filters, defaults };
 }
