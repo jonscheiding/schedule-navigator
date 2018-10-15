@@ -1,5 +1,6 @@
 *, *:before, *:after {
   box-sizing: border-box;
+  margin: 0;
 }
 
 body {
@@ -15,4 +16,12 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+button {
+  border: none;
+  background: none;
+  text-decoration: underline;
+  text-transform: inherit;
+  cursor: pointer;
 }

@@ -25,18 +25,15 @@ function cleanupDates(dates) {
 }
 
 function buildFilters(events, filterKeys) {
-  const filters = {};
-  for(const filterKey of filterKeys) {
-    const filter = {};
-    for(const event of events) {
-      filter[event[filterKey]] = {
+  return filterKeys.toObject(
+    filterKey => events.toObject(
+      event => event[filterKey],
+      event => ({
         value: event[filterKey],
         isSelected: true
-      };
-    }
-    filters[filterKey] = filter;
-  }
-  return filters;
+      })
+    )
+  );
 }
 
 export default function() {

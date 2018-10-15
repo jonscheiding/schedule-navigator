@@ -14,16 +14,14 @@ export const getRange = state => state.range;
 export const getFilters = state => state.filters;
 
 const createFilterSelectors = (filterKeys) => {
-  const selectors = {};
-  for(const filterKey of filterKeys) {
-    selectors[filterKey] = createSelector(
+  return filterKeys.toObject(
+    filterKey => createSelector(
       [getFilters],
       filters => Object.keys(filters[filterKey])
         .sort()
-        .map(value => filters[filterKey][value])
-    );
-  }
-  return selectors;
+        .map(value => filters[filterKey][value])     
+    )
+  );
 };
 
 const filterSelectors = createFilterSelectors(['location', 'type', 'topic']);
