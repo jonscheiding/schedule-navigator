@@ -12,7 +12,9 @@
     "react-redux": "^5.0.7",
     "react-scripts": "2.0.3",
     "redux": "^4.0.0",
-    "reselect": "^4.0.0"
+    "reselect": "^4.0.0",
+    "shortid": "^2.2.13",
+    "styled-components": "^4.0.0"
   },
   "scripts": {
     "start": "react-scripts start",

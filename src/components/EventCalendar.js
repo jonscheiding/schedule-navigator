@@ -7,16 +7,18 @@ import 'react-big-calendar/lib/css/react-big-calendar.css';
 
 class EventCalendar extends Component {
   render() {
-    const { events, range } = this.props;
+    const { events, range, className, style } = this.props;
 
     const localizer = Calendar.momentLocalizer(moment);
     return (
-      <Calendar 
-        localizer={localizer}
-        events={events} 
-        min={range.start} max={range.end} defaultDate={range.start}
-        views={['week', 'day', 'agenda']} defaultView='week'
-        />
+      <div className={className} style={style}>
+        <Calendar 
+          localizer={localizer}
+          events={events} 
+          min={range.start} max={range.end} defaultDate={range.start}
+          views={['week', 'day', 'agenda']} defaultView='week'
+          />
+      </div>
     );
   }
 }
@@ -26,7 +28,9 @@ EventCalendar.propTypes = {
   range: PropTypes.shape({
     start: PropTypes.instanceOf(Date).isRequired,
     end: PropTypes.instanceOf(Date).isRequired
-  }).isRequired
+  }).isRequired,
+  className: PropTypes.string,
+  style: PropTypes.string
 };
 
 EventCalendar.defaultProps = {
