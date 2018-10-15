@@ -1,11 +1,11 @@
 import { connect } from 'react-redux';
 
-import { getEvents, getRange } from '../state/selectors';
+import { getFilteredEvents, getRange } from '../state/selectors';
 import EventCalendar from '../components/EventCalendar';
 
 const mapStateToProps = 
   state => ({
-    events: getEvents(state),
+    events: getFilteredEvents(state),
     range: getRange(state)
   });
 

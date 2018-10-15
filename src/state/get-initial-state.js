@@ -24,6 +24,21 @@ function cleanupDates(dates) {
   dates.end = parseDateIntoEventLocalTime(dates.end);
 }
 
+function buildFilters(events, filterKeys) {
+  const filters = {};
+  for(const filterKey of filterKeys) {
+    const filter = {};
+    for(const event of events) {
+      filter[event[filterKey]] = {
+        value: event[filterKey],
+        isSelected: true
+      };
+    }
+    filters[filterKey] = filter;
+  }
+  return filters;
+}
+
 export default function() {
   const events = require('../data/events.json');
   const range = require('../data/range.json');
@@ -31,5 +46,7 @@ export default function() {
   cleanupEvents(events);
   cleanupRange(range);
 
-  return { events, range };
+  const filters = buildFilters(events, ['location', 'type', 'topic']);
+
+  return { events, range, filters };
 }
