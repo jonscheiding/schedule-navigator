@@ -1,8 +1,17 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
 import LabeledInput from './LabeledInput';
 import FilterHeader, { Buttons } from './FilterHeader';
+
+const ColorLabel = styled.div`
+  display: ${p => p.color !== undefined ? 'inline-block' : 'none'};
+  width: 1em;
+  height: 1em;
+  background-color: ${p => p.color};
+  border-radius: 5px;
+`;
 
 class Filter extends Component {
   render() {
@@ -21,6 +30,7 @@ class Filter extends Component {
           <LabeledInput 
             key={f.value || ''} type='checkbox' 
             checked={f.isSelected} onChange={this.handleFilterChange(f.value)}>
+            <ColorLabel color={f.color} />
             {f.value || <i>Unknown</i>}
           </LabeledInput>
         )}

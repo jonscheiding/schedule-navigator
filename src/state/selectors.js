@@ -32,10 +32,18 @@ export const getOptions = state => state.options;
 const createFilterSelectors = (filterKeys) => {
   return filterKeys.toObject(
     filterKey => createSelector(
-      [getFilters],
-      filters => Object.keys(filters[filterKey])
+      [getFilters, getOptions, getColors],
+      (filters, options, colors) => Object.keys(filters[filterKey])
         .sort()
-        .map(value => filters[filterKey][value])     
+        .map(value => {
+          if(filterKey === options.colorBy) {
+            return {
+              ...filters[filterKey][value],
+              color: colors[filterKey][value]
+            };
+          }
+          return filters[filterKey][value];
+        })     
     )
   );
 };
