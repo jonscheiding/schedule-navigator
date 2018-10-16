@@ -9,8 +9,21 @@ const filtersMatch = (filters, event) => {
   return true;
 };
 
+const contains = (values, query) => {
+  for(const value of values) {
+    if(value.toLowerCase().indexOf(query.toLowerCase()) >= 0) {
+      return true;
+    }
+  }
+  return false;
+};
+
+const queryMatches = (query, event) =>
+  contains([event.abbreviation, event.title, event.abstract], query);
+
 export const getEvents = state => state.events;
 export const getRange = state => state.range;
+export const getQuery = state => state.query;
 export const getFilters = state => state.filters;
 export const getDefaults = state => state.defaults;
 
@@ -30,6 +43,8 @@ const filterSelectors = createFilterSelectors(['location', 'type', 'topic']);
 export const getFilter = (state, props) => filterSelectors[props.filterKey](state);
 
 export const getFilteredEvents = createSelector(
-  [getEvents, getFilters],
-  (events, filters) => events.filter(e => filtersMatch(filters, e))
+  [getEvents, getFilters, getQuery],
+  (events, filters, query) => events.filter(e => 
+    filtersMatch(filters, e) &&
+    queryMatches(query, e))
 );

@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import EventCalendarContainer from './containers/EventCalendarContainer';
 import FilterContainer from './containers/FilterContainer';
+import QueryContainer from './containers/QueryContainer';
 
 const AppGrid = styled.div`
   display: grid;
@@ -36,6 +37,7 @@ class App extends Component {
           <FilterContainer filterKey='location' />
           <FilterContainer filterKey='topic' className='auto' />
           <FilterContainer filterKey='type' />
+          <QueryContainer />
         </FilterGrid>
         <EventCalendarContainer />
       </AppGrid>
