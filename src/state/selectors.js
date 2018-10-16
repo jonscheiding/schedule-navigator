@@ -24,6 +24,7 @@ const queryMatches = (query, event) =>
 export const getEvents = state => state.events;
 export const getRange = state => state.range;
 export const getQuery = state => state.query;
+export const getColors = state => state.colors;
 export const getFilters = state => state.filters;
 export const getDefaults = state => state.defaults;
 
@@ -40,10 +41,22 @@ const createFilterSelectors = (filterKeys) => {
 
 const filterSelectors = createFilterSelectors(['location', 'type', 'topic']);
 
+const getEventColor = (event, colors) => {
+  return colors.location[event.location];
+};
+
 export const getFilter = (state, props) => filterSelectors[props.filterKey](state);
 
+export const getEventsColored = createSelector(
+  [getEvents, getColors],
+  (events, colors) => events.map(event => ({
+    ...event,
+    color: getEventColor(event, colors)
+  }))
+);
+
 export const getFilteredEvents = createSelector(
-  [getEvents, getFilters, getQuery],
+  [getEventsColored, getFilters, getQuery],
   (events, filters, query) => events.filter(e => 
     filtersMatch(filters, e) &&
     queryMatches(query, e))

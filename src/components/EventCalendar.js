@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Calendar from 'react-big-calendar';
 import moment from 'moment';
+import { desaturate, darken, transparentize } from 'polished';
 
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 
@@ -18,9 +19,26 @@ class EventCalendar extends Component {
           min={range.start} max={range.end} defaultDate={defaults.date}
           views={['week', 'day', 'agenda']} defaultView={defaults.view}
           onNavigate={this.handleNavigate} onView={this.handleView}
+          eventPropGetter={this.getEventProps}
           />
       </div>
     );
+  }
+
+  getEventProps = (e, start, end, isSelected) => {
+    let backgroundColor = desaturate(0.25, e.color);
+    let borderColor = darken(0.2, backgroundColor);
+    
+    if(!isSelected) {
+      backgroundColor = transparentize(0.2, backgroundColor);
+    }
+
+    return {
+      style: {
+        backgroundColor: backgroundColor,
+        borderColor: borderColor,
+      }
+    };
   }
 
   handleNavigate = (e) => {

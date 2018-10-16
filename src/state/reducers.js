@@ -53,6 +53,7 @@ const filtersReducer = combineReducers({
 export default combineReducers({
   events: (state = []) => state,
   range: (state = {}) => state,
+  colors: (state = {}) => state,
   defaults: defaultsReducer,
   filters: filtersReducer,
   query: queryReducer

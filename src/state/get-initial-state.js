@@ -39,6 +39,7 @@ function buildFilters(events, filterKeys) {
 export default function() {
   const events = require('../data/events.json');
   const range = require('../data/range.json');
+  const colors = require('../data/colors.json');
 
   cleanupEvents(events);
   cleanupRange(range);
@@ -50,5 +51,5 @@ export default function() {
     date: range.start
   };
 
-  return { events, range, filters, defaults };
+  return { events, range, filters, defaults, colors };
 }
