@@ -26,6 +26,10 @@ class EventCalendar extends Component {
   }
 
   getEventProps = (e, start, end, isSelected) => {
+    if(!e.color) {
+      return {};
+    }
+
     let backgroundColor = desaturate(0.25, e.color);
     let borderColor = darken(0.2, backgroundColor);
     

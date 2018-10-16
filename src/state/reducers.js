@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import { CHANGE_FILTER, CHANGE_ALL_FILTERS, CHANGE_DATE, CHANGE_VIEW, CHANGE_QUERY } from './actions';
+import { CHANGE_FILTER, CHANGE_ALL_FILTERS, CHANGE_DATE, CHANGE_VIEW, CHANGE_QUERY, CHANGE_OPTIONS } from './actions';
 
 const defaultsReducer = (state = {}, action) => {
   switch(action.type) {
@@ -44,6 +44,18 @@ const queryReducer = (state = '', action) => {
   }
 };
 
+const optionsReducer = (state = { colorBy: 'location' }, action) => {
+  switch(action.type) {
+    case CHANGE_OPTIONS:
+      return {
+        ...state,
+        ...action.options
+      };
+    default:
+      return state;
+  }
+};
+
 const filtersReducer = combineReducers({
   location: filterReducer('location'),
   topic: filterReducer('topic'),
@@ -56,5 +68,6 @@ export default combineReducers({
   colors: (state = {}) => state,
   defaults: defaultsReducer,
   filters: filtersReducer,
-  query: queryReducer
+  query: queryReducer,
+  options: optionsReducer
 });

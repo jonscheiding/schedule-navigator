@@ -27,6 +27,7 @@ export const getQuery = state => state.query;
 export const getColors = state => state.colors;
 export const getFilters = state => state.filters;
 export const getDefaults = state => state.defaults;
+export const getOptions = state => state.options;
 
 const createFilterSelectors = (filterKeys) => {
   return filterKeys.toObject(
@@ -41,17 +42,17 @@ const createFilterSelectors = (filterKeys) => {
 
 const filterSelectors = createFilterSelectors(['location', 'type', 'topic']);
 
-const getEventColor = (event, colors) => {
-  return colors.location[event.location];
+const getEventColor = (event, colors, colorBy) => {
+  return colors[colorBy][event[colorBy]];
 };
 
 export const getFilter = (state, props) => filterSelectors[props.filterKey](state);
 
 export const getEventsColored = createSelector(
-  [getEvents, getColors],
-  (events, colors) => events.map(event => ({
+  [getEvents, getColors, getOptions],
+  (events, colors, options) => events.map(event => ({
     ...event,
-    color: getEventColor(event, colors)
+    color: getEventColor(event, colors, options.colorBy)
   }))
 );
 
