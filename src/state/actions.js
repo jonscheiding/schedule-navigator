@@ -4,6 +4,7 @@ export const CHANGE_QUERY = 'CHANGE_QUERY';
 export const CHANGE_DATE = 'CHANGE_DATE';
 export const CHANGE_VIEW = 'CHANGE_VIEW';
 export const CHANGE_OPTIONS = 'CHANGE_OPTIONS';
+export const SELECT_EVENT = 'SELECT_EVENT';
 
 export const changeFilter = (filterKey, value, isSelected) => 
   ({type: CHANGE_FILTER, filterKey, value, isSelected});
@@ -22,3 +23,6 @@ export const changeQuery = (query) =>
 
 export const changeOptions = (options) =>
   ({type: CHANGE_OPTIONS, options});
+
+export const selectEvent = (event) => 
+  ({type: SELECT_EVENT, event});

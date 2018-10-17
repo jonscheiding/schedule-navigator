@@ -5,6 +5,7 @@ import EventCalendarContainer from './containers/EventCalendarContainer';
 import FilterContainer from './containers/FilterContainer';
 import QueryContainer from './containers/QueryContainer';
 import OptionsContainer from './containers/OptionsContainer';
+import SelectedEventContainer from './containers/SelectedEventContainer';
 
 const AppGrid = styled.div`
   display: grid;
@@ -30,6 +31,14 @@ const FilterGrid = styled.div`
   }
 `;
 
+const CalendarGrid = styled.div`
+  display: grid;
+  grid-template-rows: auto 200px;
+  height: 100vh;
+
+  > .auto { overflow: auto; }
+`;
+
 class App extends Component {
   render() {
     return (
@@ -41,7 +50,10 @@ class App extends Component {
           <QueryContainer />
           <OptionsContainer />
         </FilterGrid>
-        <EventCalendarContainer />
+        <CalendarGrid>
+          <EventCalendarContainer className='auto' />
+          <SelectedEventContainer className='auto' />
+        </CalendarGrid>
       </AppGrid>
     );
   }

@@ -18,7 +18,7 @@ class EventCalendar extends Component {
           events={events} 
           min={range.start} max={range.end} defaultDate={defaults.date}
           views={['week', 'day', 'agenda']} defaultView={defaults.view}
-          onNavigate={this.handleNavigate} onView={this.handleView}
+          onNavigate={this.handleNavigate} onView={this.handleView} onSelectEvent={this.handleSelectEvent}
           eventPropGetter={this.getEventProps}
           />
       </div>
@@ -52,6 +52,10 @@ class EventCalendar extends Component {
   handleView = (e) => {
     this.props.onChangeView(e);
   }
+
+  handleSelectEvent = (e) => {
+    this.props.onSelectEvent(e);
+  }
 }
 
 EventCalendar.propTypes = {
@@ -67,13 +71,15 @@ EventCalendar.propTypes = {
   className: PropTypes.string,
   style: PropTypes.string,
   onChangeDate: PropTypes.func,
-  onChangeView: PropTypes.func
+  onChangeView: PropTypes.func,
+  onSelectEvent: PropTypes.func
 };
 
 EventCalendar.defaultProps = {
   events: [],
   onChangeDate: () => {},
-  onChangeView: () => {}
+  onChangeView: () => {},
+  onSelectEvent: () => {}
 };
 
 export default EventCalendar;
