@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 
 import { getFilteredEvents, getRange, getDefaults } from '../state/selectors';
 import EventCalendar from '../components/EventCalendar';
-import { changeDate, changeView, selectEvent } from '../state/actions';
+import { CHANGE_DATE, CHANGE_VIEW, SELECT_EVENT } from '../state/actions';
 
 const mapStateToProps = 
   state => ({
@@ -13,9 +13,9 @@ const mapStateToProps =
 
 const mapDispatchToProps = 
   dispatch => ({
-    onChangeDate: (date) => dispatch(changeDate(date)),
-    onChangeView: (view) => dispatch(changeView(view)),
-    onSelectEvent: (event) => dispatch(selectEvent(event))
+    onChangeDate: (date) => dispatch({type: CHANGE_DATE, date}),
+    onChangeView: (view) => dispatch({type: CHANGE_VIEW, view}),
+    onSelectEvent: (event) => dispatch({type: SELECT_EVENT, event})
   });
 
 export default connect(mapStateToProps, mapDispatchToProps)(EventCalendar);

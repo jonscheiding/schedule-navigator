@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-import { changeOptions } from '../state/actions';
+import { CHANGE_OPTIONS } from '../state/actions';
 import { getOptions } from '../state/selectors';
 import Options from '../components/Options';
 
@@ -9,7 +9,7 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  onChangeOptions: (options) => dispatch(changeOptions(options))
+  onChangeOptions: (options) => dispatch({type: CHANGE_OPTIONS, options})
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Options);
