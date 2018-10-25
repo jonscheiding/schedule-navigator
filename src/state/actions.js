@@ -5,3 +5,4 @@ export const CHANGE_DATE = 'CHANGE_DATE';
 export const CHANGE_VIEW = 'CHANGE_VIEW';
 export const CHANGE_OPTIONS = 'CHANGE_OPTIONS';
 export const SELECT_EVENT = 'SELECT_EVENT';
+export const SET_INTERESTED = 'SET_INTERESTED';

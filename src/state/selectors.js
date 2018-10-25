@@ -6,15 +6,25 @@ import colorHelper from '../ColorHelper';
 export const getFilters = state => state.filters;
 export const getQuery = state => state.query;
 export const getOptions = state => state.options;
+export const getInterested = state => state.interested;
 
 export const getMatchingEvents = createSelector(
   [getFilters, getQuery],
   (filters, query) => eventRepository.getMatchingEvents(filters, query)
 );
 
-export const getColoredEvents = createSelector(
-  [getOptions, getMatchingEvents],
-  (options, events) => colorHelper.colorEvents(events, options.colorBy)
+export const getDecoratedEvents = createSelector(
+  [getOptions, getInterested, getMatchingEvents],
+  (options, interested, events) => events.map(e => ({
+    ...e,
+    color: colorHelper.getEventColor(e, options.colorBy),
+    interested: interested[e.id] === true
+  }))
+);
+
+export const getSelectedEvent = createSelector(
+  [getDecoratedEvents, state => state.selectedEvent],
+  (events, id) => events.find(e => e.id === id) || null
 );
 
 export const getRange = state => state.range;

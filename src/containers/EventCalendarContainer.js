@@ -1,12 +1,13 @@
 import { connect } from 'react-redux';
 
-import { getRange, getDefaults, getColoredEvents } from '../state/selectors';
+import { getRange, getDefaults, getDecoratedEvents, getSelectedEvent } from '../state/selectors';
 import EventCalendar from '../components/EventCalendar';
 import { CHANGE_DATE, CHANGE_VIEW, SELECT_EVENT } from '../state/actions';
 
 const mapStateToProps = 
   state => ({
-    events: getColoredEvents(state),
+    events: getDecoratedEvents(state),
+    selectedEvent: getSelectedEvent(state),
     range: getRange(state),
     defaults: getDefaults(state)
   });

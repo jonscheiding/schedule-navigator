@@ -1,5 +1,10 @@
 import { combineReducers } from 'redux';
-import { CHANGE_FILTER, CHANGE_ALL_FILTERS, CHANGE_DATE, CHANGE_VIEW, CHANGE_QUERY, CHANGE_OPTIONS, SELECT_EVENT } from './actions';
+import { 
+  CHANGE_FILTER, CHANGE_ALL_FILTERS, 
+  CHANGE_DATE, CHANGE_VIEW, 
+  CHANGE_QUERY, CHANGE_OPTIONS, 
+  SELECT_EVENT, SET_INTERESTED 
+} from './actions';
 
 export const FILTER_PROPERTIES = ['location', 'topic', 'type'];
 
@@ -37,6 +42,18 @@ const filterReducer = (filterKey) => (state = {}, action) => {
   }
 };
 
+const interestedReducer = (state = {}, action) => {
+  switch(action.type) {
+    case SET_INTERESTED:
+      return {
+        ...state,
+        [action.event.id]: action.interested
+      };
+    default:
+      return state;
+  }
+};
+
 const queryReducer = (state = '', action) => {
   switch(action.type) {
     case CHANGE_QUERY:
@@ -46,7 +63,11 @@ const queryReducer = (state = '', action) => {
   }
 };
 
-const optionsReducer = (state = { colorBy: 'location' }, action) => {
+const optionsReducer = (state = { 
+  colorBy: 'location', 
+  alwaysShowInterested: false, 
+  hideNotInterested: false 
+}, action) => {
   switch(action.type) {
     case CHANGE_OPTIONS:
       return {
@@ -61,7 +82,7 @@ const optionsReducer = (state = { colorBy: 'location' }, action) => {
 const selectedEventReducer = (state = null, action) => {
   switch(action.type) {
     case SELECT_EVENT:
-      return action.event;
+      return action.event.id;
     default:
       return state;
   }
@@ -81,5 +102,6 @@ export default combineReducers({
   filters: filtersReducer,
   query: queryReducer,
   options: optionsReducer,
+  interested: interestedReducer,
   selectedEvent: selectedEventReducer
 });

@@ -8,7 +8,7 @@ import 'react-big-calendar/lib/css/react-big-calendar.css';
 
 class EventCalendar extends Component {
   render() {
-    const { events, range, defaults, className, style } = this.props;
+    const { events, selectedEvent, range, defaults, className, style } = this.props;
 
     const localizer = Calendar.momentLocalizer(moment);
     return (
@@ -18,7 +18,8 @@ class EventCalendar extends Component {
           events={events} 
           min={range.start} max={range.end} defaultDate={defaults.date}
           views={['week', 'day', 'agenda']} defaultView={defaults.view}
-          onNavigate={this.handleNavigate} onView={this.handleView} onSelectEvent={this.handleSelectEvent}
+          onNavigate={this.handleNavigate} onView={this.handleView} 
+          selected={selectedEvent} onSelectEvent={this.handleSelectEvent}
           eventPropGetter={this.getEventProps}
           />
       </div>
@@ -60,6 +61,7 @@ class EventCalendar extends Component {
 
 EventCalendar.propTypes = {
   events: PropTypes.arrayOf(PropTypes.object),
+  selectedEvent: PropTypes.object,
   range: PropTypes.shape({
     start: PropTypes.instanceOf(Date).isRequired,
     end: PropTypes.instanceOf(Date).isRequired
