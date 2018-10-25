@@ -1,6 +1,8 @@
 import { combineReducers } from 'redux';
 import { CHANGE_FILTER, CHANGE_ALL_FILTERS, CHANGE_DATE, CHANGE_VIEW, CHANGE_QUERY, CHANGE_OPTIONS, SELECT_EVENT } from './actions';
 
+export const FILTER_PROPERTIES = ['location', 'topic', 'type'];
+
 const defaultsReducer = (state = {}, action) => {
   switch(action.type) {
     case CHANGE_DATE:

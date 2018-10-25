@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
+import { FILTER_PROPERTIES } from '../state/reducers';
 import FilterHeader from './FilterHeader';
 import LabeledInput from './LabeledInput';
-
-const COLOR_BY_OPTIONS = ['location', 'topic', 'type'];
 
 class Options extends Component {
   render() {
@@ -15,7 +14,7 @@ class Options extends Component {
         <FilterHeader>Options</FilterHeader>
         <div>
           Color by:
-          {COLOR_BY_OPTIONS.map(option => (
+          {FILTER_PROPERTIES.map(option => (
             <LabeledInput type='radio' radioGroup='colorBy' 
               key={option} value={option} 
               checked={option === colorBy} onChange={this.handleColorByChange}>

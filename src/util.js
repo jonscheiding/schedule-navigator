@@ -13,3 +13,8 @@ Array.prototype.toObject = function(valueFnOrKeyFn, valueFn) {
 
   return result;
 };
+
+// eslint-disable-next-line no-extend-native
+Object.prototype.toArray = function(valueFn) {
+  return Object.keys(this).map(key => valueFn(key, this[key]));
+};
