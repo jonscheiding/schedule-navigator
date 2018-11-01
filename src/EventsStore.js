@@ -1,11 +1,14 @@
 import randomColor from 'randomcolor';
 
 import events from './events.json';
+import agenda from './agenda.json';
 import colors from './colors.json';
 
-for(const event of events) {
-  event.start = new Date(Date.parse(event.start));
-  event.end = new Date(Date.parse(event.end));
+for(const eventList of [events, agenda]) {
+  for(const event of eventList) {
+    event.start = new Date(Date.parse(event.start));
+    event.end = new Date(Date.parse(event.end));
+  }
 }
 
 export const COLOR_BY_OPTIONS = [ 'location', 'topic', 'type' ];
@@ -13,6 +16,7 @@ export const COLOR_BY_OPTIONS = [ 'location', 'topic', 'type' ];
 export default class EventsStore {
   constructor() {
     this.events = events;
+    this.agenda = agenda.map(e => ({...e, isAgenda: true}));
     this.colors = colors;
 
     this.topics = this._createFilterMap(e => e.topic, 'topic');
@@ -23,10 +27,11 @@ export default class EventsStore {
     this.searchText = null;
     this.alwaysShowInterested = false;
     this.hideNotInterested = false;
+    this.showAgenda = false;
   }
 
   getFilteredList() {
-    return this.events
+    var result = this.events
       .filter(e => 
         (this.interested[e.id] && this.alwaysShowInterested) ||
         (
@@ -39,8 +44,13 @@ export default class EventsStore {
       .map(e => ({
         ...e,
         color: this._getColor(e)
-      }))
-      ;
+      }));
+
+    if(this.showAgenda) {
+      result.push(...this.agenda);
+    }
+
+    return result;
   }
 
   updateInterested(event, value) {

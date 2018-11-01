@@ -1,0 +1,476 @@
+[
+  {
+    "title": "Harley Ride",
+    "sublabel": "The Venetian",
+    "start": "2018-11-25T20:00:00.000Z",
+    "end": "2018-11-26T01:30:00.000Z"
+  },
+  {
+    "title": "Campus Shuttle",
+    "sublabel": "",
+    "start": "2018-11-25T20:30:00.000Z",
+    "end": "2018-11-26T09:30:00.000Z"
+  },
+  {
+    "title": "Registration & Help Desk",
+    "sublabel": "The Venetian, Level 2 and ARIA, Level 1",
+    "start": "2018-11-25T21:00:00.000Z",
+    "end": "2018-11-26T04:00:00.000Z"
+  },
+  {
+    "title": "Midnight Madness",
+    "sublabel": "The Venetian, Level 2",
+    "start": "2018-11-26T06:00:00.000Z",
+    "end": "2018-11-26T09:00:00.000Z"
+  },
+  {
+    "title": "Campus Shuttle",
+    "sublabel": "",
+    "start": "2018-11-26T14:00:00.000Z",
+    "end": "2018-11-27T05:30:00.000Z"
+  },
+  {
+    "title": "Registration & Help Desk",
+    "sublabel": "The Venetian, Level 2 and ARIA, Level 1",
+    "start": "2018-11-26T14:30:00.000Z",
+    "end": "2018-11-27T04:00:00.000Z"
+  },
+  {
+    "title": "AWS Certified Lounge",
+    "sublabel": "The Venetian, Level 1, Casanova Foyer",
+    "start": "2018-11-26T15:30:00.000Z",
+    "end": "2018-11-27T01:00:00.000Z"
+  },
+  {
+    "title": "AWS Certification Exams",
+    "sublabel": "The Venetian, Level 1, Casanova 501",
+    "start": "2018-11-26T15:30:00.000Z",
+    "end": "2018-11-27T05:00:00.000Z"
+  },
+  {
+    "title": "Hands-on Labs",
+    "sublabel": "The Venetian, Level 2, Venetian D",
+    "start": "2018-11-26T16:00:00.000Z",
+    "end": "2018-11-27T00:00:00.000Z"
+  },
+  {
+    "title": "Spotlight Labs",
+    "sublabel": "The Venetian, Level 2, Venetian A",
+    "start": "2018-11-26T16:00:00.000Z",
+    "end": "2018-11-27T01:00:00.000Z"
+  },
+  {
+    "title": "Bootcamps",
+    "sublabel": "MGM",
+    "start": "2018-11-26T16:00:00.000Z",
+    "end": "2018-11-27T01:00:00.000Z"
+  },
+  {
+    "title": "Breakout Sessions",
+    "sublabel": "ARIA, The Venetian",
+    "start": "2018-11-26T18:00:00.000Z",
+    "end": "2018-11-27T05:00:00.000Z"
+  },
+  {
+    "title": "Meals",
+    "sublabel": "ARIA, West, Level 1; Bellagio, Level 1;  Mirage, Level 1; MGM, Level 1; and The Venetian, Level 1",
+    "start": "2018-11-26T19:00:00.000Z",
+    "end": "2018-11-26T21:00:00.000Z"
+  },
+  {
+    "title": "Welcome Reception",
+    "sublabel": "ARIA, Level 1 and Venetian, Level 2",
+    "start": "2018-11-27T00:00:00.000Z",
+    "end": "2018-11-27T03:00:00.000Z"
+  },
+  {
+    "title": "Expo",
+    "sublabel": "Venetian, Level 2",
+    "start": "2018-11-27T00:00:00.000Z",
+    "end": "2018-11-27T03:00:00.000Z"
+  },
+  {
+    "title": "The Quad",
+    "sublabel": "ARIA, Level 1",
+    "start": "2018-11-27T00:00:00.000Z",
+    "end": "2018-11-27T03:00:00.000Z"
+  },
+  {
+    "title": "AWS Certified Lounge",
+    "sublabel": "ARIA, Level 1,  The Quad",
+    "start": "2018-11-27T00:00:00.000Z",
+    "end": "2018-11-27T03:00:00.000Z"
+  },
+  {
+    "title": "Monday Night Live",
+    "sublabel": "Venetian, Level 2",
+    "start": "2018-11-27T03:30:00.000Z",
+    "end": "2018-11-27T05:00:00.000Z"
+  },
+  {
+    "title": "Campus Shuttle",
+    "sublabel": "",
+    "start": "2018-11-27T14:00:00.000Z",
+    "end": "2018-11-28T05:30:00.000Z"
+  },
+  {
+    "title": "4k and 8k run",
+    "sublabel": "Mirage, Level 1, Events Center B",
+    "start": "2018-11-27T14:00:00.000Z",
+    "end": "2018-11-27T16:00:00.000Z"
+  },
+  {
+    "title": "Registration & Help Desk",
+    "sublabel": "The Venetian, Level 2 and ARIA, Level 1",
+    "start": "2018-11-27T14:30:00.000Z",
+    "end": "2018-11-28T04:00:00.000Z"
+  },
+  {
+    "title": "Meals",
+    "sublabel": "ARIA, West, Level 1 and East, Level 3; Bellagio, Level 1;  Mirage, Level 1; MGM, Level 1; and The Venetian, Level 1",
+    "start": "2018-11-27T14:30:00.000Z",
+    "end": "2018-11-27T16:30:00.000Z"
+  },
+  {
+    "title": "Meals",
+    "sublabel": "ARIA, West, Level 1 and East, Level 3; Bellagio, Level 1;  Mirage, Level 1; MGM, Level 1; and The Venetian, Level 1",
+    "start": "2018-11-27T19:00:00.000Z",
+    "end": "2018-11-27T21:00:00.000Z"
+  },
+  {
+    "title": "Meals",
+    "sublabel": "ARIA, West, Level 1 and East, Level 3; Bellagio, Level 1;  Mirage, Level 1; MGM, Level 1; and The Venetian, Level 1",
+    "start": "2018-11-27T19:00:00.000Z",
+    "end": "2018-11-27T21:00:00.000Z"
+  },
+  {
+    "title": "AWS Certified Lounge",
+    "sublabel": "The Venetian, Level 1, Casanova Foyer",
+    "start": "2018-11-27T15:30:00.000Z",
+    "end": "2018-11-28T02:00:00.000Z"
+  },
+  {
+    "title": "AWS Certification Exams",
+    "sublabel": "The Venetian, Level 1, Casanova 501",
+    "start": "2018-11-27T15:30:00.000Z",
+    "end": "2018-11-28T05:00:00.000Z"
+  },
+  {
+    "title": "Hands-on Labs",
+    "sublabel": "The Venetian, Level 2, Venetian D",
+    "start": "2018-11-27T16:00:00.000Z",
+    "end": "2018-11-28T00:00:00.000Z"
+  },
+  {
+    "title": "Spotlight Labs",
+    "sublabel": "The Venetian, Level 2, Venetian A",
+    "start": "2018-11-27T16:00:00.000Z",
+    "end": "2018-11-28T01:00:00.000Z"
+  },
+  {
+    "title": "Bootcamps",
+    "sublabel": "MGM",
+    "start": "2018-11-27T16:00:00.000Z",
+    "end": "2018-11-28T01:00:00.000Z"
+  },
+  {
+    "title": "Breakout Sessions",
+    "sublabel": "ARIA, The Venetian",
+    "start": "2018-11-27T16:00:00.000Z",
+    "end": "2018-11-28T02:00:00.000Z"
+  },
+  {
+    "title": "Breakout Sessions",
+    "sublabel": "ARIA, The Venetian",
+    "start": "2018-11-28T03:00:00.000Z",
+    "end": "2018-11-28T05:00:00.000Z"
+  },
+  {
+    "title": "Breakout Sessions",
+    "sublabel": "ARIA, The Venetian",
+    "start": "2018-11-28T03:00:00.000Z",
+    "end": "2018-11-28T05:00:00.000Z"
+  },
+  {
+    "title": "Global Partner Summit Keynote",
+    "sublabel": "The Venetian, Level 2",
+    "start": "2018-11-27T16:30:00.000Z",
+    "end": "2018-11-27T18:30:00.000Z"
+  },
+  {
+    "title": "Expo",
+    "sublabel": "Venetian, Level 2",
+    "start": "2018-11-27T16:00:00.000Z",
+    "end": "2018-11-28T02:00:00.000Z"
+  },
+  {
+    "title": "The Quad",
+    "sublabel": "ARIA, Level 1",
+    "start": "2018-11-27T16:00:00.000Z",
+    "end": "2018-11-28T02:00:00.000Z"
+  },
+  {
+    "title": "AWS Certified Lounge",
+    "sublabel": "ARIA, Level 1,  The Quad",
+    "start": "2018-11-27T16:00:00.000Z",
+    "end": "2018-11-28T02:00:00.000Z"
+  },
+  {
+    "title": "Pub Crawl",
+    "sublabel": "ARIA, Mirage, Top Golf, The Venetian",
+    "start": "2018-11-28T02:00:00.000Z",
+    "end": "2018-11-28T04:00:00.000Z"
+  },
+  {
+    "title": "Campus Shuttle",
+    "sublabel": "",
+    "start": "2018-11-28T14:00:00.000Z",
+    "end": "2018-11-29T05:30:00.000Z"
+  },
+  {
+    "title": "Registration & Help Desk",
+    "sublabel": "The Venetian, Level 2 and ARIA, Level 1",
+    "start": "2018-11-28T14:30:00.000Z",
+    "end": "2018-11-29T04:00:00.000Z"
+  },
+  {
+    "title": "Meals",
+    "sublabel": "ARIA, West, Level 1 and East, Level 3; Bellagio, Level 1;  Mirage, Level 1; MGM, Level 1; and The Venetian, Level 1",
+    "start": "2018-11-28T14:30:00.000Z",
+    "end": "2018-11-28T16:30:00.000Z"
+  },
+  {
+    "title": "Meals",
+    "sublabel": "ARIA, West, Level 1 and East, Level 3; Bellagio, Level 1;  Mirage, Level 1; MGM, Level 1; and The Venetian, Level 1",
+    "start": "2018-11-28T19:00:00.000Z",
+    "end": "2018-11-28T21:00:00.000Z"
+  },
+  {
+    "title": "Meals",
+    "sublabel": "ARIA, West, Level 1 and East, Level 3; Bellagio, Level 1;  Mirage, Level 1; MGM, Level 1; and The Venetian, Level 1",
+    "start": "2018-11-28T19:00:00.000Z",
+    "end": "2018-11-28T21:00:00.000Z"
+  },
+  {
+    "title": "AWS Certified Lounge",
+    "sublabel": "The Venetian, Level 1, Casanova Foyer",
+    "start": "2018-11-28T15:30:00.000Z",
+    "end": "2018-11-29T02:00:00.000Z"
+  },
+  {
+    "title": "AWS Certification Exams",
+    "sublabel": "The Venetian, Level 1, Casanova 501",
+    "start": "2018-11-28T15:30:00.000Z",
+    "end": "2018-11-29T02:30:00.000Z"
+  },
+  {
+    "title": "Keynote, Andy Jassy",
+    "sublabel": "The Venetian, Level 2",
+    "start": "2018-11-28T16:00:00.000Z",
+    "end": "2018-11-28T18:30:00.000Z"
+  },
+  {
+    "title": "Hands-on Labs",
+    "sublabel": "The Venetian, Level 2, Venetian D",
+    "start": "2018-11-28T16:00:00.000Z",
+    "end": "2018-11-29T00:00:00.000Z"
+  },
+  {
+    "title": "Spotlight Labs",
+    "sublabel": "The Venetian, Level 2, Venetian A",
+    "start": "2018-11-28T16:00:00.000Z",
+    "end": "2018-11-29T01:00:00.000Z"
+  },
+  {
+    "title": "Breakout Sessions",
+    "sublabel": "ARIA, The Venetian",
+    "start": "2018-11-28T19:30:00.000Z",
+    "end": "2018-11-29T02:00:00.000Z"
+  },
+  {
+    "title": "Breakout Sessions",
+    "sublabel": "ARIA, The Venetian",
+    "start": "2018-11-29T03:00:00.000Z",
+    "end": "2018-11-29T05:00:00.000Z"
+  },
+  {
+    "title": "Expo",
+    "sublabel": "Venetian, Level 2",
+    "start": "2018-11-28T18:00:00.000Z",
+    "end": "2018-11-29T02:00:00.000Z"
+  },
+  {
+    "title": "Breakout Sessions",
+    "sublabel": "ARIA, The Venetian",
+    "start": "2018-11-29T03:00:00.000Z",
+    "end": "2018-11-29T05:00:00.000Z"
+  },
+  {
+    "title": "The Quad",
+    "sublabel": "ARIA, Level 1",
+    "start": "2018-11-28T18:00:00.000Z",
+    "end": "2018-11-29T02:00:00.000Z"
+  },
+  {
+    "title": "AWS Certified Lounge",
+    "sublabel": "ARIA, Level 1,  The Quad",
+    "start": "2018-11-28T18:00:00.000Z",
+    "end": "2018-11-29T02:00:00.000Z"
+  },
+  {
+    "title": "AWS Certified Appreciation Reception",
+    "sublabel": "TBD",
+    "start": "2018-11-29T02:00:00.000Z",
+    "end": "2018-11-29T04:00:00.000Z"
+  },
+  {
+    "title": "Late night Hands-on Labs",
+    "sublabel": "Venetian, Level 2",
+    "start": "2018-11-29T03:00:00.000Z",
+    "end": "2018-11-29T07:00:00.000Z"
+  },
+  {
+    "title": "Campus Shuttle",
+    "sublabel": "Conference",
+    "start": "2018-11-29T14:00:00.000Z",
+    "end": "2018-11-30T02:00:00.000Z"
+  },
+  {
+    "title": "Registration & Help Desk",
+    "sublabel": "The Venetian, Level 2 and ARIA, Level 1",
+    "start": "2018-11-29T14:30:00.000Z",
+    "end": "2018-11-30T04:00:00.000Z"
+  },
+  {
+    "title": "Meals",
+    "sublabel": "ARIA, West, Level 1 and East, Level 3; Bellagio, Level 1;  Mirage, Level 1; MGM, Level 1; and The Venetian, Level 1",
+    "start": "2018-11-29T14:30:00.000Z",
+    "end": "2018-11-29T16:30:00.000Z"
+  },
+  {
+    "title": "Meals",
+    "sublabel": "ARIA, West, Level 1 and East, Level 3; Bellagio, Level 1;  Mirage, Level 1; MGM, Level 1; and The Venetian, Level 1",
+    "start": "2018-11-29T19:00:00.000Z",
+    "end": "2018-11-29T21:00:00.000Z"
+  },
+  {
+    "title": "Meals",
+    "sublabel": "ARIA, West, Level 1 and East, Level 3; Bellagio, Level 1;  Mirage, Level 1; MGM, Level 1; and The Venetian, Level 1",
+    "start": "2018-11-29T19:00:00.000Z",
+    "end": "2018-11-29T21:00:00.000Z"
+  },
+  {
+    "title": "AWS Certified Lounge",
+    "sublabel": "The Venetian, Level 1, Casanova Foyer",
+    "start": "2018-11-29T15:30:00.000Z",
+    "end": "2018-11-30T01:00:00.000Z"
+  },
+  {
+    "title": "AWS Certification Exams",
+    "sublabel": "The Venetian, Level 1, Casanova 501",
+    "start": "2018-11-29T15:30:00.000Z",
+    "end": "2018-11-30T01:00:00.000Z"
+  },
+  {
+    "title": "Keynote, Dr. Werner Vogels",
+    "sublabel": "The Venetian, Level 2",
+    "start": "2018-11-29T16:30:00.000Z",
+    "end": "2018-11-29T18:30:00.000Z"
+  },
+  {
+    "title": "Hands-on Labs",
+    "sublabel": "The Venetian, Level 2, Venetian D",
+    "start": "2018-11-29T16:00:00.000Z",
+    "end": "2018-11-30T00:00:00.000Z"
+  },
+  {
+    "title": "Spotlight Labs",
+    "sublabel": "The Venetian, Level 2, Venetian A",
+    "start": "2018-11-29T16:00:00.000Z",
+    "end": "2018-11-30T01:00:00.000Z"
+  },
+  {
+    "title": "Breakout Sessions",
+    "sublabel": "ARIA, The Venetian",
+    "start": "2018-11-29T19:30:00.000Z",
+    "end": "2018-11-30T01:30:00.000Z"
+  },
+  {
+    "title": "Expo",
+    "sublabel": "Venetian, Level 2",
+    "start": "2018-11-29T18:00:00.000Z",
+    "end": "2018-11-30T00:00:00.000Z"
+  },
+  {
+    "title": "The Quad",
+    "sublabel": "ARIA, Level 1",
+    "start": "2018-11-29T18:00:00.000Z",
+    "end": "2018-11-30T00:00:00.000Z"
+  },
+  {
+    "title": "AWS Certified Lounge",
+    "sublabel": "ARIA, Level 1,  The Quad",
+    "start": "2018-11-29T18:00:00.000Z",
+    "end": "2018-11-30T00:00:00.000Z"
+  },
+  {
+    "title": "re:Play Shuttle",
+    "sublabel": "To re:Play",
+    "start": "2018-11-30T03:30:00.000Z",
+    "end": "2018-11-30T06:30:00.000Z"
+  },
+  {
+    "title": "re:Play",
+    "sublabel": "",
+    "start": "2018-11-30T04:00:00.000Z",
+    "end": "2018-11-30T08:00:00.000Z"
+  },
+  {
+    "title": "re:Play Shuttle",
+    "sublabel": "From re:Play",
+    "start": "2018-11-30T06:30:00.000Z",
+    "end": "2018-11-30T08:30:00.000Z"
+  },
+  {
+    "title": "Campus Shuttle",
+    "sublabel": "",
+    "start": "2018-11-30T14:00:00.000Z",
+    "end": "2018-11-30T21:00:00.000Z"
+  },
+  {
+    "title": "Help Desk",
+    "sublabel": "The Venetian, Level 2",
+    "start": "2018-11-30T15:00:00.000Z",
+    "end": "2018-11-30T20:00:00.000Z"
+  },
+  {
+    "title": "Meals",
+    "sublabel": "Mirage, Level 1 and The Venetian, Level 1",
+    "start": "2018-11-30T14:30:00.000Z",
+    "end": "2018-11-30T16:30:00.000Z"
+  },
+  {
+    "title": "AWS Certified Lounge",
+    "sublabel": "The Venetian, Level 1, Casanova Foyer",
+    "start": "2018-11-30T15:30:00.000Z",
+    "end": "2018-11-30T20:00:00.000Z"
+  },
+  {
+    "title": "AWS Certification Exams",
+    "sublabel": "The Venetian, Level 1, Casanova 501",
+    "start": "2018-11-30T15:30:00.000Z",
+    "end": "2018-11-30T20:30:00.000Z"
+  },
+  {
+    "title": "Hands-on Labs",
+    "sublabel": "The Venetian, Level 2, Venetian D",
+    "start": "2018-11-30T16:00:00.000Z",
+    "end": "2018-11-30T19:00:00.000Z"
+  },
+  {
+    "title": "Breakout Sessions",
+    "sublabel": "Mirage and The Venetian",
+    "start": "2018-11-30T16:00:00.000Z",
+    "end": "2018-11-30T20:30:00.000Z"
+  }
+]

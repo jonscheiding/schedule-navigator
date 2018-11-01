@@ -122,8 +122,8 @@ class App extends Component {
     const accessors = {
       startAccessor: e => this.convertToEventLocalTime(e.start),
       endAccessor: e => this.convertToEventLocalTime(e.end),
-      titleAccessor: e => e.abbreviation + ' ' + e.title,
-      tooltipAccessor: e => e.abbreviation + ' ' + e.title
+      titleAccessor: e => (e.abbreviation || '') + ' ' + e.title,
+      tooltipAccessor: e => (e.abbreviation || '') + ' ' + e.title
     };
 
     const handlers = {
@@ -182,20 +182,22 @@ class App extends Component {
         <div className='meta'>
           <div><b>{event.abbreviation} {event.title}</b></div>
           <div>{event.topic}</div>
-          <div><i>{event.type}</i></div>
+          <div><i>{event.type || event.sublabel}</i></div>
           { hideTimes ? null : 
             <div>
               {moment(this.convertToEventLocalTime(event.start)).format('h:mm a')} -
               {moment(this.convertToEventLocalTime(event.end)).format('h:mm a')}
             </div>
           }
-          <div className='interested'>
-            <InputWithLabel type='checkbox' title='Toggle Interested (\)'
-              checked={this.state.interested[event.id]} 
-              onChange={e => this.handleInterestedCheckboxChange(e, event)}>
-              Interested
-            </InputWithLabel>
-          </div>
+          { event.isAgenda ? null : 
+            <div className='interested'>
+              <InputWithLabel type='checkbox' title='Toggle Interested (\)'
+                checked={this.state.interested[event.id]} 
+                onChange={e => this.handleInterestedCheckboxChange(e, event)}>
+                Interested
+              </InputWithLabel>
+            </div>
+          }
         </div>
         <div className='abstract'>
           <p>{event.abstract}</p>
@@ -228,6 +230,13 @@ class App extends Component {
             checked={this.eventStore.hideNotInterested}
             onChange={this.handleHideNotInterestedCheckboxChange}>
             Hide events that are not marked as "interested"
+          </InputWithLabel>
+        </div>
+        <div className='option'>
+          <InputWithLabel type='checkbox' float
+            checked={this.eventStore.showAgenda}
+            onChange={this.handleShowAgendaCheckboxChange}>
+            Show conference agenda
           </InputWithLabel>
         </div>
         <div className='option'>
@@ -275,7 +284,7 @@ class App extends Component {
 
   renderChoice(choice, title) {
     return (
-      <div key={choice.value}>
+      <div key={choice.value || ''}>
         <InputWithLabel type='checkbox' 
           checked={choice.isIncluded}
           onChange={e => this.handleFilterCheckboxChange(e, choice)}>
@@ -309,6 +318,11 @@ class App extends Component {
     this.setStateFromStore();
   }
 
+  handleShowAgendaCheckboxChange = (e) => {
+    this.eventStore.showAgenda = e.target.checked;
+    this.setStateFromStore();
+  }
+
   handleInterestedCheckboxChange = (e, event) => {
     this.eventStore.updateInterested(event, e.target.checked);
     this.setStateFromStore();
@@ -331,6 +345,8 @@ class App extends Component {
   }
 
   handleEventDoubleClick = (event) => {
+    if(event.isAgenda) { return false; }
+
     this.eventStore.updateInterested(event, !this.state.interested[event.id]);
     this.setStateFromStore();
     return false;
@@ -402,6 +418,12 @@ class App extends Component {
   } 
 
   getEventProps = (e, start, end, isSelected) => {
+    if(e.isAgenda) {
+      return {
+        className: 'agenda'
+      };
+    }
+
     let backgroundColor = desaturate(0.25, e.color);
     let borderColor = darken(0.2, backgroundColor);
     

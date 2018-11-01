@@ -7,7 +7,7 @@
     "classnames": "^2.2.6",
     "moment": "^2.22.2",
     "patch-package": "^5.1.1",
-    "polished": "^2.2.0",
+    "polished": "^2.3.0",
     "randomcolor": "^0.5.3",
     "react": "^16.5.2",
     "react-big-calendar": "^0.20.1",

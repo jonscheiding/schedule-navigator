@@ -127,3 +127,15 @@ input[type='text'] {
 
 .checkbox.float input { margin-top: 2px; float: left; }
 .checkbox.float label { display: block; margin-left: 20px; }
+
+.rbc-event.agenda {
+  background-color: #666d;
+  border-color: #222;
+  color: white;
+}
+
+.rbc-event.agenda.rbc-selected {
+  background-color: #666;
+  z-index: 2;
+  box-shadow: 0px 0px 10px #0009;
+}
