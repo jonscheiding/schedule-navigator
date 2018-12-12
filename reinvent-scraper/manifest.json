@@ -1,0 +1,15 @@
+{
+ "manifest_version": 2,
+ "name": "AWS re:Invent Schedule Scraper",
+ "description": "",
+ "version": "1",
+ "author": "Jon Scheiding",
+ "content_scripts": [
+   {
+     "matches": [
+       "https://www.portal.reinvent.awsevents.com/*"
+     ],
+     "js": [ "jquery-3.3.1.min.js", "reinvent-scraper.js" ]
+   }
+ ]
+}
